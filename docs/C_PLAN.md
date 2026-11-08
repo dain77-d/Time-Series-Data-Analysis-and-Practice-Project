@@ -69,8 +69,10 @@ cd C_graph
 python cdata.py                            # 노드 651 × 시간 캐시 (1~2분)
 python experiments.py --list
 nohup python experiments.py --workers 2 > ../results/C/queue.log 2>&1 &   # E1→E2→E4→E3
+# GPU 여러 장: nohup python experiments.py --gpus 4 --per-gpu 2 > ../results/C/queue.log 2>&1 &
 python occlude.py                          # F 모델 가리기
 python score_all.py                        # 2023 검증 채점, 가설 표
+python region_contribution.py              # 권역별 의존도·고유 정보 표와 히트맵
 python score_all.py --split test --final   # 모든 설정 동결 후 한 번
 ```
 
@@ -89,6 +91,7 @@ python score_all.py --split test --final   # 모든 설정 동결 후 한 번
 | **RTX 4090 24GB** | 약 10–20초 | **약 6–10시간** | 가성비 최고. vast.ai·RunPod 시간당 약 $0.4–0.7 → **약 $3–7** |
 | A100 40/80GB | 약 8–15초 | 약 5–8시간 | 시간당 약 $1.2–2 |
 | L4 24GB | 약 30–50초 | 약 15–25시간 | |
+| **L4 24GB × 4 (gp4l16-g3)** | 장당 약 30–50초 | **약 4–7시간** | `--gpus 4 --per-gpu 2`로 8개 동시 실행. 프로세스당 RAM 약 2–3 GB |
 | Colab T4 16GB | 약 60–100초 | 약 30–50시간 | 세션 끊김 때문에 비추천 |
 
 **추천 사양:**

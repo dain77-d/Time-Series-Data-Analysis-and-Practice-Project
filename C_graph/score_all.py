@@ -19,7 +19,7 @@ import pandas as pd
 import cdata
 from experiments import ADD, CTRL
 
-RUNS = cdata.REPO / "results" / "C" / "runs"
+RUNS = cdata.RUNS
 
 
 def files(model, conds):

@@ -4,3 +4,4 @@ pyarrow
 scipy
 torch>=2.1
 tabulate
+matplotlib

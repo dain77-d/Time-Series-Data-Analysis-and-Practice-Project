@@ -25,7 +25,7 @@ from torch import nn
 import cdata
 
 WINDOW, H = 48, np.array(cdata.HORIZONS)
-OUT = cdata.REPO / "results" / "C" / "runs"
+OUT = cdata.RUNS
 
 
 # ------------------------------------------------------------------ data

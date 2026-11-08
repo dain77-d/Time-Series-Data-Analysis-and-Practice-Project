@@ -9,9 +9,11 @@ Every run uses seeds 11, 22, 33. Order: E1, E2, E4, E3 (the most important first
 Usage:
   python experiments.py --list                      # print the plan
   python experiments.py --workers 2 [--only E1,E2]  # run what is missing; safe to restart
+  python experiments.py --gpus 4 --per-gpu 2        # 8 workers, CUDA_VISIBLE_DEVICES assigned round-robin
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
@@ -49,12 +51,14 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--data")
     ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--gpus", type=int, default=0, help="number of GPUs; overrides --workers with gpus*per_gpu")
+    ap.add_argument("--per-gpu", type=int, default=1)
     ap.add_argument("--only")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--epochs", type=int, default=40)
     a = ap.parse_args()
     root = cdata.data_root(a.data)
-    out = cdata.REPO / "results" / "C" / "runs"
+    out = cdata.RUNS
     jobs = [j for j in plan(root) if not a.only or j["family"] in a.only.split(",")]
     if a.list:
         from collections import Counter
@@ -63,19 +67,25 @@ if __name__ == "__main__":
         sys.exit()
     log = cdata.REPO / "results" / "C" / "logs"
     log.mkdir(parents=True, exist_ok=True)
+    if a.gpus:
+        a.workers = a.gpus * a.per_gpu
     todo, running = [j for j in jobs if not done(j, out)], []
+    slots = list(range(a.workers))
     while todo or running:
         while todo and len(running) < a.workers:
             j = todo.pop(0)
             name = f"{j['model']}__{j['condition']}__seed{j['seed']}"
             f = open(log / f"{name}.log", "w", encoding="utf-8")
+            slot = slots.pop(0)
+            env = dict(os.environ, **({"CUDA_VISIBLE_DEVICES": str(slot % a.gpus)} if a.gpus else {}))
             p = subprocess.Popen([sys.executable, str(Path(__file__).parent / "train.py"), "--model", j["model"], "--condition", j["condition"],
-                                  "--seed", str(j["seed"]), "--data", str(root), "--epochs", str(a.epochs)], stdout=f, stderr=subprocess.STDOUT)
-            running.append((p, f, name, time.time()))
+                                  "--seed", str(j["seed"]), "--data", str(root), "--epochs", str(a.epochs)], stdout=f, stderr=subprocess.STDOUT, env=env)
+            running.append((p, f, name, time.time(), slot))
             print(f"start {name}  (left {len(todo)})", flush=True)
         for r in running[:]:
             if r[0].poll() is not None:
                 r[1].close()
                 running.remove(r)
+                slots.append(r[4])
                 print(f"{'done' if r[0].returncode == 0 else 'FAILED'} {r[2]} {time.time() - r[3]:.0f}s", flush=True)
         time.sleep(5)

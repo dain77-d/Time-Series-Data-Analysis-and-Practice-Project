@@ -19,6 +19,7 @@ import pandas as pd
 
 REPO = Path(__file__).resolve().parents[1]
 WORK = REPO / "work"
+RUNS = Path(os.environ.get("C_RUNS", REPO / "results" / "C" / "runs"))   # override for tests
 TARGET = "KR:111121"
 HORIZONS = (3, 6, 12, 24)
 DIST_SIGMA_KM, DIST_CUTOFF_KM = 182.34497839213313, 500.0   # team protocol: fixed, not re-estimated

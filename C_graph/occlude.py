@@ -26,7 +26,7 @@ def main(models, root):
     pos = {k: i for i, k in enumerate(data["node_keys"])}
     for m in models:
         for seed in (11, 22, 33):
-            ck = cdata.REPO / "results" / "C" / "runs" / m / "F" / f"seed{seed}" / "model.pt"
+            ck = cdata.RUNS / m / "F" / f"seed{seed}" / "model.pt"
             if not ck.exists():
                 print("missing", ck)
                 continue
@@ -39,7 +39,7 @@ def main(models, root):
                 nodes = [pos[k] for k in keys if k in pos]
                 if len(nodes) < len(keys):   # region not (fully) inside F, e.g. the 11-07 control regions
                     continue
-                d = cdata.REPO / "results" / "C" / "runs" / f"{m}_OCC" / f"F_OCC_{r}" / f"seed{seed}"
+                d = cdata.RUNS / f"{m}_OCC" / f"F_OCC_{r}" / f"seed{seed}"
                 if (d / "predictions.parquet").exists():
                     continue
                 x = x0.clone()
