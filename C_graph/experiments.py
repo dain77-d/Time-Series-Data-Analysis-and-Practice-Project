@@ -57,6 +57,7 @@ if __name__ == "__main__":
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--epochs", type=int, default=40)
     ap.add_argument("--threads", type=int, default=8, help="CPU threads per training process")
+    ap.add_argument("--max-heavy", type=int, default=2, help="max concurrent GCN runs with >200 nodes per GPU (~16 GB each)")
     a = ap.parse_args()
     root = cdata.data_root(a.data)
     out = cdata.RUNS
@@ -72,9 +73,16 @@ if __name__ == "__main__":
         a.workers = a.gpus * a.per_gpu
     todo, running = [j for j in jobs if not done(j, out)], []
     slots = list(range(a.workers))
+    heavy = lambda j: "GCN" in j["model"] and j["condition"] != "D67"  # noqa: E731
+    tries = {}
     while todo or running:
         while todo and len(running) < a.workers:
-            j = todo.pop(0)
+            n_heavy = sum(heavy(r[5]) for r in running)
+            pick = next((j for j in todo if not heavy(j) or n_heavy < a.max_heavy * max(a.gpus, 1)), None)
+            if pick is None:
+                break
+            j = pick
+            todo.remove(j)
             name = f"{j['model']}__{j['condition']}__seed{j['seed']}"
             f = open(log / f"{name}.log", "w", encoding="utf-8")
             slot = slots.pop(0)
@@ -82,7 +90,7 @@ if __name__ == "__main__":
                        **({"CUDA_VISIBLE_DEVICES": str(slot % a.gpus)} if a.gpus else {}))
             p = subprocess.Popen([sys.executable, str(Path(__file__).parent / "train.py"), "--model", j["model"], "--condition", j["condition"],
                                   "--seed", str(j["seed"]), "--data", str(root), "--epochs", str(a.epochs)], stdout=f, stderr=subprocess.STDOUT, env=env)
-            running.append((p, f, name, time.time(), slot))
+            running.append((p, f, name, time.time(), slot, j))
             print(f"start {name}  (left {len(todo)})", flush=True)
         for r in running[:]:
             if r[0].poll() is not None:
@@ -90,4 +98,7 @@ if __name__ == "__main__":
                 running.remove(r)
                 slots.append(r[4])
                 print(f"{'done' if r[0].returncode == 0 else 'FAILED'} {r[2]} {time.time() - r[3]:.0f}s", flush=True)
+                if r[0].returncode and tries.get(r[2], 0) < 2:      # e.g. CUDA OOM: retry later
+                    tries[r[2]] = tries.get(r[2], 0) + 1
+                    todo.append(r[5])
         time.sleep(5)
