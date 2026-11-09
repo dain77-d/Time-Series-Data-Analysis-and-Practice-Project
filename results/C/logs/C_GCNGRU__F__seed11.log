@@ -1,0 +1,44 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU F seed11 ep0 train=0.5273 val=0.5216 36.16s
+C_GCNGRU F seed11 ep1 train=0.4705 val=0.5021 38.92s
+C_GCNGRU F seed11 ep2 train=0.4467 val=0.4932 37.86s
+C_GCNGRU F seed11 ep3 train=0.4364 val=0.4840 38.56s
+C_GCNGRU F seed11 ep4 train=0.4294 val=0.4852 38.32s
+C_GCNGRU F seed11 ep5 train=0.4246 val=0.4926 37.95s
+C_GCNGRU F seed11 ep6 train=0.4207 val=0.4786 37.8s
+C_GCNGRU F seed11 ep7 train=0.4171 val=0.4756 38.71s
+C_GCNGRU F seed11 ep8 train=0.4128 val=0.4825 38.52s
+C_GCNGRU F seed11 ep9 train=0.4105 val=0.4767 37.64s
+C_GCNGRU F seed11 ep10 train=0.4066 val=0.4806 37.99s
+C_GCNGRU F seed11 ep11 train=0.4063 val=0.4903 38.19s
+C_GCNGRU F seed11 ep12 train=0.4037 val=0.4784 37.0s
+C_GCNGRU F seed11 ep13 train=0.4007 val=0.4808 41.55s
+{
+ "model": "C_GCNGRU",
+ "condition": "F",
+ "seed": 11,
+ "nodes": 601,
+ "parameters": 10692,
+ "best_val_loss": 0.4755549430847168,
+ "best_epoch": 7,
+ "epochs_run": 14,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 542.1,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

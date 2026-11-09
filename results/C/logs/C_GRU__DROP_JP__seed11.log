@@ -1,0 +1,39 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GRU DROP_JP seed11 ep0 train=0.4437 val=0.4366 11.49s
+C_GRU DROP_JP seed11 ep1 train=0.3591 val=0.4263 7.13s
+C_GRU DROP_JP seed11 ep2 train=0.3112 val=0.4187 9.38s
+C_GRU DROP_JP seed11 ep3 train=0.2746 val=0.4282 11.61s
+C_GRU DROP_JP seed11 ep4 train=0.2443 val=0.4247 9.4s
+C_GRU DROP_JP seed11 ep5 train=0.2191 val=0.4465 7.68s
+C_GRU DROP_JP seed11 ep6 train=0.2037 val=0.4368 6.12s
+C_GRU DROP_JP seed11 ep7 train=0.1846 val=0.4357 6.19s
+C_GRU DROP_JP seed11 ep8 train=0.1742 val=0.4553 6.7s
+{
+ "model": "C_GRU",
+ "condition": "DROP_JP",
+ "seed": 11,
+ "nodes": 577,
+ "parameters": 104452,
+ "best_val_loss": 0.4187484085559845,
+ "best_epoch": 2,
+ "epochs_run": 9,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 93.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

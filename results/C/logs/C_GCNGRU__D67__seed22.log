@@ -1,0 +1,51 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU D67 seed22 ep0 train=0.5221 val=0.5278 4.69s
+C_GCNGRU D67 seed22 ep1 train=0.4750 val=0.5070 4.4s
+C_GCNGRU D67 seed22 ep2 train=0.4642 val=0.5131 4.34s
+C_GCNGRU D67 seed22 ep3 train=0.4566 val=0.5064 4.42s
+C_GCNGRU D67 seed22 ep4 train=0.4509 val=0.4938 4.4s
+C_GCNGRU D67 seed22 ep5 train=0.4476 val=0.4999 4.24s
+C_GCNGRU D67 seed22 ep6 train=0.4438 val=0.4996 4.15s
+C_GCNGRU D67 seed22 ep7 train=0.4392 val=0.4946 4.0s
+C_GCNGRU D67 seed22 ep8 train=0.4348 val=0.4913 4.07s
+C_GCNGRU D67 seed22 ep9 train=0.4335 val=0.4924 4.11s
+C_GCNGRU D67 seed22 ep10 train=0.4318 val=0.4955 3.89s
+C_GCNGRU D67 seed22 ep11 train=0.4296 val=0.4895 1.86s
+C_GCNGRU D67 seed22 ep12 train=0.4267 val=0.4917 1.93s
+C_GCNGRU D67 seed22 ep13 train=0.4247 val=0.4947 1.89s
+C_GCNGRU D67 seed22 ep14 train=0.4230 val=0.4856 1.78s
+C_GCNGRU D67 seed22 ep15 train=0.4229 val=0.4933 1.84s
+C_GCNGRU D67 seed22 ep16 train=0.4210 val=0.4970 1.79s
+C_GCNGRU D67 seed22 ep17 train=0.4181 val=0.4902 1.64s
+C_GCNGRU D67 seed22 ep18 train=0.4184 val=0.4915 1.64s
+C_GCNGRU D67 seed22 ep19 train=0.4151 val=0.4866 2.74s
+C_GCNGRU D67 seed22 ep20 train=0.4157 val=0.4974 4.1s
+{
+ "model": "C_GCNGRU",
+ "condition": "D67",
+ "seed": 22,
+ "nodes": 68,
+ "parameters": 10692,
+ "best_val_loss": 0.4855731725692749,
+ "best_epoch": 14,
+ "epochs_run": 21,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 70.1,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

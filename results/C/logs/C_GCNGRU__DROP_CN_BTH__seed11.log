@@ -1,0 +1,44 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_CN_BTH seed11 ep0 train=0.5273 val=0.5223 56.18s
+C_GCNGRU DROP_CN_BTH seed11 ep1 train=0.4724 val=0.5055 54.5s
+C_GCNGRU DROP_CN_BTH seed11 ep2 train=0.4491 val=0.4957 54.29s
+C_GCNGRU DROP_CN_BTH seed11 ep3 train=0.4384 val=0.4858 55.7s
+C_GCNGRU DROP_CN_BTH seed11 ep4 train=0.4316 val=0.4871 56.4s
+C_GCNGRU DROP_CN_BTH seed11 ep5 train=0.4270 val=0.4949 56.39s
+C_GCNGRU DROP_CN_BTH seed11 ep6 train=0.4228 val=0.4799 56.5s
+C_GCNGRU DROP_CN_BTH seed11 ep7 train=0.4192 val=0.4766 56.1s
+C_GCNGRU DROP_CN_BTH seed11 ep8 train=0.4149 val=0.4826 56.1s
+C_GCNGRU DROP_CN_BTH seed11 ep9 train=0.4129 val=0.4787 56.49s
+C_GCNGRU DROP_CN_BTH seed11 ep10 train=0.4086 val=0.4827 56.7s
+C_GCNGRU DROP_CN_BTH seed11 ep11 train=0.4082 val=0.4923 56.7s
+C_GCNGRU DROP_CN_BTH seed11 ep12 train=0.4057 val=0.4807 56.7s
+C_GCNGRU DROP_CN_BTH seed11 ep13 train=0.4020 val=0.4841 56.6s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_CN_BTH",
+ "seed": 11,
+ "nodes": 592,
+ "parameters": 10692,
+ "best_val_loss": 0.4766400456428528,
+ "best_epoch": 7,
+ "epochs_run": 14,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 796.6,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

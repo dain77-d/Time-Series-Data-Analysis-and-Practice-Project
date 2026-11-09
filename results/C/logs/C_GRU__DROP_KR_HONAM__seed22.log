@@ -1,0 +1,40 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GRU DROP_KR_HONAM seed22 ep0 train=0.4319 val=0.4565 8.69s
+C_GRU DROP_KR_HONAM seed22 ep1 train=0.3480 val=0.4698 6.79s
+C_GRU DROP_KR_HONAM seed22 ep2 train=0.3028 val=0.4406 8.1s
+C_GRU DROP_KR_HONAM seed22 ep3 train=0.2687 val=0.4236 6.72s
+C_GRU DROP_KR_HONAM seed22 ep4 train=0.2391 val=0.4264 8.08s
+C_GRU DROP_KR_HONAM seed22 ep5 train=0.2173 val=0.4427 9.69s
+C_GRU DROP_KR_HONAM seed22 ep6 train=0.1961 val=0.4439 9.4s
+C_GRU DROP_KR_HONAM seed22 ep7 train=0.1802 val=0.4347 10.21s
+C_GRU DROP_KR_HONAM seed22 ep8 train=0.1718 val=0.4604 10.81s
+C_GRU DROP_KR_HONAM seed22 ep9 train=0.1610 val=0.4977 8.33s
+{
+ "model": "C_GRU",
+ "condition": "DROP_KR_HONAM",
+ "seed": 22,
+ "nodes": 515,
+ "parameters": 96516,
+ "best_val_loss": 0.42362940311431885,
+ "best_epoch": 3,
+ "epochs_run": 10,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 102.4,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

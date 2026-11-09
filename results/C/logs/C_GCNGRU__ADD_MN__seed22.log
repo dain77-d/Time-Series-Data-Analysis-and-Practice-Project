@@ -1,0 +1,51 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_MN seed22 ep0 train=0.5275 val=0.5387 31.5s
+C_GCNGRU ADD_MN seed22 ep1 train=0.4801 val=0.5163 29.7s
+C_GCNGRU ADD_MN seed22 ep2 train=0.4644 val=0.5173 30.1s
+C_GCNGRU ADD_MN seed22 ep3 train=0.4508 val=0.4971 30.0s
+C_GCNGRU ADD_MN seed22 ep4 train=0.4418 val=0.4927 29.7s
+C_GCNGRU ADD_MN seed22 ep5 train=0.4375 val=0.4879 30.0s
+C_GCNGRU ADD_MN seed22 ep6 train=0.4328 val=0.4912 29.9s
+C_GCNGRU ADD_MN seed22 ep7 train=0.4266 val=0.4829 29.7s
+C_GCNGRU ADD_MN seed22 ep8 train=0.4227 val=0.4827 29.7s
+C_GCNGRU ADD_MN seed22 ep9 train=0.4227 val=0.4831 29.7s
+C_GCNGRU ADD_MN seed22 ep10 train=0.4210 val=0.4864 29.7s
+C_GCNGRU ADD_MN seed22 ep11 train=0.4181 val=0.4805 29.7s
+C_GCNGRU ADD_MN seed22 ep12 train=0.4140 val=0.4819 29.7s
+C_GCNGRU ADD_MN seed22 ep13 train=0.4127 val=0.4867 29.7s
+C_GCNGRU ADD_MN seed22 ep14 train=0.4098 val=0.4756 28.6s
+C_GCNGRU ADD_MN seed22 ep15 train=0.4103 val=0.4833 28.12s
+C_GCNGRU ADD_MN seed22 ep16 train=0.4073 val=0.4865 29.67s
+C_GCNGRU ADD_MN seed22 ep17 train=0.4039 val=0.4846 29.7s
+C_GCNGRU ADD_MN seed22 ep18 train=0.4049 val=0.4807 29.8s
+C_GCNGRU ADD_MN seed22 ep19 train=0.4016 val=0.4770 29.7s
+C_GCNGRU ADD_MN seed22 ep20 train=0.4015 val=0.4918 29.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_MN",
+ "seed": 22,
+ "nodes": 516,
+ "parameters": 10692,
+ "best_val_loss": 0.4756244719028473,
+ "best_epoch": 14,
+ "epochs_run": 21,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 634.2,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

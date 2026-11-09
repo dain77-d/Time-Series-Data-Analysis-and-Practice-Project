@@ -1,0 +1,49 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_JP seed33 ep0 train=0.5244 val=0.5258 33.08s
+C_GCNGRU ADD_JP seed33 ep1 train=0.4748 val=0.5107 32.0s
+C_GCNGRU ADD_JP seed33 ep2 train=0.4587 val=0.5079 32.6s
+C_GCNGRU ADD_JP seed33 ep3 train=0.4450 val=0.4947 31.8s
+C_GCNGRU ADD_JP seed33 ep4 train=0.4394 val=0.4900 32.4s
+C_GCNGRU ADD_JP seed33 ep5 train=0.4343 val=0.4908 29.4s
+C_GCNGRU ADD_JP seed33 ep6 train=0.4269 val=0.4871 29.5s
+C_GCNGRU ADD_JP seed33 ep7 train=0.4259 val=0.4863 30.4s
+C_GCNGRU ADD_JP seed33 ep8 train=0.4219 val=0.4866 31.1s
+C_GCNGRU ADD_JP seed33 ep9 train=0.4193 val=0.4852 31.6s
+C_GCNGRU ADD_JP seed33 ep10 train=0.4167 val=0.4917 30.6s
+C_GCNGRU ADD_JP seed33 ep11 train=0.4137 val=0.4914 31.0s
+C_GCNGRU ADD_JP seed33 ep12 train=0.4105 val=0.4837 30.6s
+C_GCNGRU ADD_JP seed33 ep13 train=0.4103 val=0.4908 32.2s
+C_GCNGRU ADD_JP seed33 ep14 train=0.4063 val=0.4910 30.0s
+C_GCNGRU ADD_JP seed33 ep15 train=0.4031 val=0.4907 30.5s
+C_GCNGRU ADD_JP seed33 ep16 train=0.4019 val=0.4843 30.2s
+C_GCNGRU ADD_JP seed33 ep17 train=0.3982 val=0.4873 29.8s
+C_GCNGRU ADD_JP seed33 ep18 train=0.3959 val=0.4865 29.8s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_JP",
+ "seed": 33,
+ "nodes": 539,
+ "parameters": 10692,
+ "best_val_loss": 0.4836979806423187,
+ "best_epoch": 12,
+ "epochs_run": 19,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 601.4,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

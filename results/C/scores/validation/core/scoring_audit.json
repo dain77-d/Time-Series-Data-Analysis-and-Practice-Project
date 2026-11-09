@@ -1,0 +1,140 @@
+{
+  "protocol_version": "fixed-calendar-seed-v1.0.0",
+  "split": "validation",
+  "fixed_eligible_by_horizon": {
+    "3": 2531,
+    "6": 2530,
+    "12": 2528,
+    "24": 2524
+  },
+  "fixed_calendar_slots_by_horizon": {
+    "3": 2920,
+    "6": 2920,
+    "12": 2920,
+    "24": 2920
+  },
+  "rows_selected_using_predictions": false,
+  "model_prediction_intersection_used": false,
+  "negative_prediction_rule": "clip each scored forecast at zero; count per run and horizon",
+  "seed_score_summary_is_not_prediction_ensemble": true,
+  "ensemble_rule": "raw-unit arithmetic mean, then nonnegative clip",
+  "hac_default": "max(horizon/3-1,0), Bartlett, exact elapsed-time slots, gaps retained",
+  "hac_lag_override": null,
+  "bootstrap": "moving 7-day=56 calendar-slot blocks; gaps remain inside blocks",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 0,
+  "holm_family": "all finite p-values in this declared scoring invocation (all included horizons/runs/pairs)",
+  "test_guard": false,
+  "does_not_train_models": true,
+  "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
+  "written_kst": "2026-11-09T14:58:21.840539+09:00",
+  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
+  "prediction_sources": [
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/D67/seed11/predictions.parquet",
+      "sha256": "79b86a7b80aabafbae72be990d89ef78c8287881d392b0506f117aec653b7b54",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/D67/seed22/predictions.parquet",
+      "sha256": "c95dcfaa3ee28df9ba46f2971adc568186796aeced1f0a236cb3aa211c320949",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/D67/seed33/predictions.parquet",
+      "sha256": "c1513f87a177e82ce135e3ff0d47820fe61aa4851dad6a6c198d2d51f63a2caa",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DN/seed11/predictions.parquet",
+      "sha256": "9cd5b7aefa4ba35b388897947dd28090cb01ee89c950ab3fc9eee664a3c1fc7a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DN/seed22/predictions.parquet",
+      "sha256": "b91a78fe388b6ef0209ebc5d62e1bc8128cb8fe503d8c30a32d3a2e524d29e0a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DN/seed33/predictions.parquet",
+      "sha256": "4b3d72a12bfb1430381d3f62696cb7edd96a3337c22361723108e512bbed829f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed11/predictions.parquet",
+      "sha256": "c8b6960f8cf8a0c986613985ccfa92938b2f709b0b827807a20d083cc9b85231",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed22/predictions.parquet",
+      "sha256": "3615d1c4794b61d16111cb16b4dc9d0afbfcc597efb0c6d8a7b01b0d0f7a34ed",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed33/predictions.parquet",
+      "sha256": "5e061ba1ab76c6a0aa156b697530605e4409489696d66baf0dde4e42110b7fdb",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/D67/seed11/predictions.parquet",
+      "sha256": "cbde1927e8ff2a8950cbed9a1a29bc401b6a2d99f4e4fb3c9a9b3a198100b760",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/D67/seed22/predictions.parquet",
+      "sha256": "edf0e8fcf23317aacb547fdff03fc580e2dbc4832f02f6a4b88d5c5ef0616f65",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/D67/seed33/predictions.parquet",
+      "sha256": "21f88f7440817b56032ce9f8828311eada942a4ab01bf8aeb96c51f1f6d6bd01",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DN/seed11/predictions.parquet",
+      "sha256": "8e15baf3ed10a5c56678500a3d13cc5f89d09b976f042f5663aee44c84f040a4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DN/seed22/predictions.parquet",
+      "sha256": "be028205e594991164659825c4bb92c6b17992a8c17474ba4c2a014ece3e164c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DN/seed33/predictions.parquet",
+      "sha256": "6a9aed535b4ddcd7432dc4334ac29c51a05b2039e24e7ee9175e41703b21a43b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/F/seed11/predictions.parquet",
+      "sha256": "90058b6bfa15490a5a66b29d899cb61b6af818e13f82402da2ff1439ecea1d68",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/F/seed22/predictions.parquet",
+      "sha256": "1ada35048cc02fd43d6f31cbe96c50d2dc69854daaec442d59a29b8542c84cb4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/F/seed33/predictions.parquet",
+      "sha256": "f4b6ada7fa49aa00ef328a8def55a701d48c2a72f4391a8833465a60847b7b10",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU_PERM/F/seed11/predictions.parquet",
+      "sha256": "1fbc3ebe484dda7785589804c38566d4190416d75ceeb46ba0e7aa0cd7710838",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU_PERM/F/seed22/predictions.parquet",
+      "sha256": "39dab5ffae83a9ad1af2828d1c109a32725ec35c3dcb82eb7be8ede5d4906ecd",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU_PERM/F/seed33/predictions.parquet",
+      "sha256": "d4797172c8e63ef47520267f22e7779af3459ceef84b606503e0b1776383c41c",
+      "sidecar": null
+    }
+  ]
+}

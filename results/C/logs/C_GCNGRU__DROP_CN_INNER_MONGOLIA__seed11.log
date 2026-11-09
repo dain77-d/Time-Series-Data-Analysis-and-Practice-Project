@@ -1,0 +1,44 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep0 train=0.5274 val=0.5226 58.48s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep1 train=0.4722 val=0.5043 56.2s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep2 train=0.4486 val=0.4954 56.0s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep3 train=0.4380 val=0.4856 56.39s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep4 train=0.4310 val=0.4863 56.2s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep5 train=0.4259 val=0.4942 57.0s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep6 train=0.4219 val=0.4790 56.9s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep7 train=0.4179 val=0.4764 56.6s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep8 train=0.4139 val=0.4804 56.21s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep9 train=0.4112 val=0.4775 56.69s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep10 train=0.4072 val=0.4806 56.7s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep11 train=0.4072 val=0.4921 56.7s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep12 train=0.4045 val=0.4781 56.69s
+C_GCNGRU DROP_CN_INNER_MONGOLIA seed11 ep13 train=0.4015 val=0.4810 55.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_CN_INNER_MONGOLIA",
+ "seed": 11,
+ "nodes": 589,
+ "parameters": 10692,
+ "best_val_loss": 0.4764282703399658,
+ "best_epoch": 7,
+ "epochs_run": 14,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 804.3,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

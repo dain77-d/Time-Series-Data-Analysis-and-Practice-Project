@@ -1,0 +1,44 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_KR_GANGWON seed11 ep0 train=0.5269 val=0.5211 59.99s
+C_GCNGRU DROP_KR_GANGWON seed11 ep1 train=0.4673 val=0.4988 55.8s
+C_GCNGRU DROP_KR_GANGWON seed11 ep2 train=0.4436 val=0.4920 55.59s
+C_GCNGRU DROP_KR_GANGWON seed11 ep3 train=0.4338 val=0.4836 56.11s
+C_GCNGRU DROP_KR_GANGWON seed11 ep4 train=0.4278 val=0.4837 55.69s
+C_GCNGRU DROP_KR_GANGWON seed11 ep5 train=0.4231 val=0.4914 56.2s
+C_GCNGRU DROP_KR_GANGWON seed11 ep6 train=0.4186 val=0.4780 45.6s
+C_GCNGRU DROP_KR_GANGWON seed11 ep7 train=0.4144 val=0.4759 31.5s
+C_GCNGRU DROP_KR_GANGWON seed11 ep8 train=0.4105 val=0.4820 31.8s
+C_GCNGRU DROP_KR_GANGWON seed11 ep9 train=0.4091 val=0.4765 55.89s
+C_GCNGRU DROP_KR_GANGWON seed11 ep10 train=0.4047 val=0.4816 32.9s
+C_GCNGRU DROP_KR_GANGWON seed11 ep11 train=0.4041 val=0.4896 30.6s
+C_GCNGRU DROP_KR_GANGWON seed11 ep12 train=0.4024 val=0.4789 56.3s
+C_GCNGRU DROP_KR_GANGWON seed11 ep13 train=0.3985 val=0.4825 56.4s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_KR_GANGWON",
+ "seed": 11,
+ "nodes": 571,
+ "parameters": 10692,
+ "best_val_loss": 0.4758848547935486,
+ "best_epoch": 7,
+ "epochs_run": 14,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 713.4,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

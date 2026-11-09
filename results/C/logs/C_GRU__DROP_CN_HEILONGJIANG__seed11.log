@@ -1,0 +1,41 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GRU DROP_CN_HEILONGJIANG seed11 ep0 train=0.4411 val=0.4379 11.12s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep1 train=0.3566 val=0.4451 9.28s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep2 train=0.3082 val=0.4442 8.02s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep3 train=0.2754 val=0.4184 8.47s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep4 train=0.2497 val=0.4110 9.41s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep5 train=0.2214 val=0.4384 9.09s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep6 train=0.2067 val=0.4295 9.22s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep7 train=0.1881 val=0.4464 8.58s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep8 train=0.1763 val=0.4378 6.4s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep9 train=0.1657 val=0.4414 6.42s
+C_GRU DROP_CN_HEILONGJIANG seed11 ep10 train=0.1590 val=0.4659 5.78s
+{
+ "model": "C_GRU",
+ "condition": "DROP_CN_HEILONGJIANG",
+ "seed": 11,
+ "nodes": 595,
+ "parameters": 106756,
+ "best_val_loss": 0.4110086262226105,
+ "best_epoch": 4,
+ "epochs_run": 11,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 115.3,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

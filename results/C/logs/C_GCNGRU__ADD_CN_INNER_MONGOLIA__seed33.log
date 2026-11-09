@@ -1,0 +1,49 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep0 train=0.5245 val=0.5256 31.5s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep1 train=0.4745 val=0.5100 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep2 train=0.4571 val=0.5075 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep3 train=0.4424 val=0.4919 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep4 train=0.4365 val=0.4873 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep5 train=0.4310 val=0.4876 29.8s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep6 train=0.4239 val=0.4856 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep7 train=0.4232 val=0.4836 29.8s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep8 train=0.4191 val=0.4839 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep9 train=0.4167 val=0.4821 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep10 train=0.4140 val=0.4866 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep11 train=0.4107 val=0.4905 29.8s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep12 train=0.4082 val=0.4811 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep13 train=0.4076 val=0.4880 29.99s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep14 train=0.4032 val=0.4886 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep15 train=0.4015 val=0.4869 29.8s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep16 train=0.3995 val=0.4822 29.9s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep17 train=0.3963 val=0.4850 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed33 ep18 train=0.3942 val=0.4844 28.6s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_CN_INNER_MONGOLIA",
+ "seed": 33,
+ "nodes": 527,
+ "parameters": 10692,
+ "best_val_loss": 0.481115460395813,
+ "best_epoch": 12,
+ "epochs_run": 19,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 578.0,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

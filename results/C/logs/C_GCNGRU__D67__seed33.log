@@ -1,0 +1,41 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU D67 seed33 ep0 train=0.5191 val=0.5140 4.54s
+C_GCNGRU D67 seed33 ep1 train=0.4715 val=0.5052 4.39s
+C_GCNGRU D67 seed33 ep2 train=0.4608 val=0.5030 4.35s
+C_GCNGRU D67 seed33 ep3 train=0.4518 val=0.5021 4.42s
+C_GCNGRU D67 seed33 ep4 train=0.4483 val=0.4935 4.41s
+C_GCNGRU D67 seed33 ep5 train=0.4436 val=0.4985 4.25s
+C_GCNGRU D67 seed33 ep6 train=0.4375 val=0.4956 4.17s
+C_GCNGRU D67 seed33 ep7 train=0.4373 val=0.4939 4.03s
+C_GCNGRU D67 seed33 ep8 train=0.4335 val=0.4958 4.09s
+C_GCNGRU D67 seed33 ep9 train=0.4315 val=0.4959 4.11s
+C_GCNGRU D67 seed33 ep10 train=0.4292 val=0.4950 3.91s
+{
+ "model": "C_GCNGRU",
+ "condition": "D67",
+ "seed": 33,
+ "nodes": 68,
+ "parameters": 10692,
+ "best_val_loss": 0.49351197481155396,
+ "best_epoch": 4,
+ "epochs_run": 11,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 48.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

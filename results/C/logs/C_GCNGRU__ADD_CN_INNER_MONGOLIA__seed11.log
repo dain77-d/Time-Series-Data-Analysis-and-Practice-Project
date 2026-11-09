@@ -1,0 +1,58 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep0 train=0.5268 val=0.5237 31.48s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep1 train=0.4771 val=0.5169 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep2 train=0.4590 val=0.5061 29.8s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep3 train=0.4463 val=0.4942 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep4 train=0.4387 val=0.4933 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep5 train=0.4332 val=0.5039 29.0s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep6 train=0.4298 val=0.4869 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep7 train=0.4264 val=0.4839 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep8 train=0.4216 val=0.4886 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep9 train=0.4192 val=0.4829 29.9s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep10 train=0.4151 val=0.4866 29.64s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep11 train=0.4148 val=0.4978 29.86s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep12 train=0.4118 val=0.4847 29.4s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep13 train=0.4086 val=0.4869 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep14 train=0.4067 val=0.4791 29.1s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep15 train=0.4049 val=0.4806 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep16 train=0.4032 val=0.4832 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep17 train=0.3999 val=0.4762 29.9s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep18 train=0.3997 val=0.4796 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep19 train=0.3970 val=0.4799 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep20 train=0.3960 val=0.4790 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep21 train=0.3949 val=0.4729 29.7s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep22 train=0.3922 val=0.4806 29.3s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep23 train=0.3917 val=0.4842 29.9s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep24 train=0.3899 val=0.4897 29.8s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep25 train=0.3896 val=0.4817 28.51s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep26 train=0.3883 val=0.4842 26.38s
+C_GCNGRU ADD_CN_INNER_MONGOLIA seed11 ep27 train=0.3853 val=0.4786 29.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_CN_INNER_MONGOLIA",
+ "seed": 11,
+ "nodes": 527,
+ "parameters": 10692,
+ "best_val_loss": 0.4729074537754059,
+ "best_epoch": 21,
+ "epochs_run": 28,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 842.8,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

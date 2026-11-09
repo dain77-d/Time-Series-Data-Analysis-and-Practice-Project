@@ -1,0 +1,275 @@
+{
+  "protocol_version": "fixed-calendar-seed-v1.0.0",
+  "split": "validation",
+  "fixed_eligible_by_horizon": {
+    "3": 2531,
+    "6": 2530,
+    "12": 2528,
+    "24": 2524
+  },
+  "fixed_calendar_slots_by_horizon": {
+    "3": 2920,
+    "6": 2920,
+    "12": 2920,
+    "24": 2920
+  },
+  "rows_selected_using_predictions": false,
+  "model_prediction_intersection_used": false,
+  "negative_prediction_rule": "clip each scored forecast at zero; count per run and horizon",
+  "seed_score_summary_is_not_prediction_ensemble": true,
+  "ensemble_rule": "raw-unit arithmetic mean, then nonnegative clip",
+  "hac_default": "max(horizon/3-1,0), Bartlett, exact elapsed-time slots, gaps retained",
+  "hac_lag_override": null,
+  "bootstrap": "moving 7-day=56 calendar-slot blocks; gaps remain inside blocks",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 0,
+  "holm_family": "all finite p-values in this declared scoring invocation (all included horizons/runs/pairs)",
+  "test_guard": false,
+  "does_not_train_models": true,
+  "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
+  "written_kst": "2026-11-09T15:09:38.185633+09:00",
+  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
+  "prediction_sources": [
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed11/predictions.parquet",
+      "sha256": "c8b6960f8cf8a0c986613985ccfa92938b2f709b0b827807a20d083cc9b85231",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed22/predictions.parquet",
+      "sha256": "3615d1c4794b61d16111cb16b4dc9d0afbfcc597efb0c6d8a7b01b0d0f7a34ed",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed33/predictions.parquet",
+      "sha256": "5e061ba1ab76c6a0aa156b697530605e4409489696d66baf0dde4e42110b7fdb",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_CAPITAL/seed11/predictions.parquet",
+      "sha256": "2b86e162c9388e59a31d13d3bdb9cdf1ed812afad98c4ba58880508b70537871",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_CAPITAL/seed22/predictions.parquet",
+      "sha256": "762ff447fbc31db738e779ba49e0ba13450ab06ff4b5f22796e298ef92482da0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_CAPITAL/seed33/predictions.parquet",
+      "sha256": "335291918fc6413935a247701f77ec2afc9a80453a63e0c5ccd4dc0fa0b15205",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_GANGWON/seed11/predictions.parquet",
+      "sha256": "004e9cedfa81ce96e731d1eacd29d510a3ab51529da532ba635027d455bb7240",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_GANGWON/seed22/predictions.parquet",
+      "sha256": "ea107c483a2e07f7ecf219d99bbe5e9d174991745954adc4b883f882ab30d822",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_GANGWON/seed33/predictions.parquet",
+      "sha256": "12eb12e3622a187b983fa4d2f11566843752bffad671b82a9ce2d39b1db64160",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_CHUNGCHEONG/seed11/predictions.parquet",
+      "sha256": "59830e774a3d6b146432dd6096f29f5442c5a1d880a8c124e36f886e0cb6f7a9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_CHUNGCHEONG/seed22/predictions.parquet",
+      "sha256": "5131e1157489e7a119846e4ad1637968e5c9e595abe82f5ae640d5cfbd575ade",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_CHUNGCHEONG/seed33/predictions.parquet",
+      "sha256": "587f010ae9b3a030bcbb69f22359a314b36f5b6203edf52a7e65c72464e85b9a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_HONAM/seed11/predictions.parquet",
+      "sha256": "d59ddfc44fc3a8a96e15c0af339626e9ec661f26c32a7edd76a0f0b48bf59f09",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_HONAM/seed22/predictions.parquet",
+      "sha256": "74f97b022bb608d5e6256ae55dc1e4f5af71ed07c0ce2a613fd711442b23a09e",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_HONAM/seed33/predictions.parquet",
+      "sha256": "b26658b1717fc4226cfb9b6dccedc872058ca82566282c4f7b5465a90017c3cf",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_DAEGYEONG/seed11/predictions.parquet",
+      "sha256": "a5aa50109f8881995f773a2280467fce057f3fe0d373ff0628096810c51cdcde",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_DAEGYEONG/seed22/predictions.parquet",
+      "sha256": "a66c9f9ffc335c01919599aa3e5857f2191ac971c8408f3351b7ad8388896e4b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_DAEGYEONG/seed33/predictions.parquet",
+      "sha256": "32aab9af515d421f9fac9c4a92755df8cdc04875ce09d2c9ef875606a84020aa",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_DONGNAM/seed11/predictions.parquet",
+      "sha256": "b70b608c16722d7283b5868898e98021342bb304ce7b07c16cb732bd7e3a71a4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_DONGNAM/seed22/predictions.parquet",
+      "sha256": "a7c75691674fa0040148b04dfa7db09210bba710bbc383186baba54197ad2a03",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_DONGNAM/seed33/predictions.parquet",
+      "sha256": "1e8af61e4aef2c7a9c8c08da089ae5074f6ba8d881bcb7b2e432b55e0f203bb6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_JEJU/seed11/predictions.parquet",
+      "sha256": "962eb055847180c57fa997d5779637d92e8df64aba570628a458890776e1ca08",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_JEJU/seed22/predictions.parquet",
+      "sha256": "2d7eda599bffa2fa865fee3138a5a89583badf823c5394c3534fbe5bc3819a97",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_KR_JEJU/seed33/predictions.parquet",
+      "sha256": "4b0a30b6286e0b15f92c4501f6c5f802b71fcdea4e195696c751f4a2e59a2b3b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_SHANDONG/seed11/predictions.parquet",
+      "sha256": "c53525fbcc2fda30d0dae5ea5b2993198081c6891ff53642d8cfc814706d61c4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_SHANDONG/seed22/predictions.parquet",
+      "sha256": "470b74eff3ecff75d23036cab4270521447adaed8c3e73781796d381c41ad694",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_SHANDONG/seed33/predictions.parquet",
+      "sha256": "09c79450fda93193db62d58feb53df414a9ae5281435677a120f7ef043b771c8",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_BTH/seed11/predictions.parquet",
+      "sha256": "84f6571c9fb5997003e49752d694eb5fa7a505afcabd39d50c670a38628e73d7",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_BTH/seed22/predictions.parquet",
+      "sha256": "3924d7bb38fdf0f31694ffe59f043234be0c44d75707a839e9d409ad73421492",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_BTH/seed33/predictions.parquet",
+      "sha256": "381e21a22928fc69931244a519f394481bbb246734d4a37becc8aff8860d143f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_LIAONING/seed11/predictions.parquet",
+      "sha256": "1a3adbd34b5fe45d1d56eb5626d1eae181c1ec00e3ad778290584bb4bb6c601e",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_LIAONING/seed22/predictions.parquet",
+      "sha256": "f63d614ac3b34b054ad091d88bf09e39e6afcc46b12ac04d598a4c09f110c97d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_LIAONING/seed33/predictions.parquet",
+      "sha256": "5e750f346cc587051292dc511553a3cb8f030151e0baa7fd94071eec7f2ccae0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_JILIN/seed11/predictions.parquet",
+      "sha256": "d0f8897e044f6e1a93e0614f77d6aee9767fdc80c1464fa7270a04fb2a8cf730",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_JILIN/seed22/predictions.parquet",
+      "sha256": "044895fcf5ac33c0907a72f0c83f53026861d60452cbf0001c21cef6858a4a3f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_JILIN/seed33/predictions.parquet",
+      "sha256": "9dacfa6b7a7af60ed1f18cd5002a02d0e1d5a7e11b2a49e089ebb216ff767c06",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "sha256": "30b8564d6b26d75807148f1d10c5bedf88a69c365f0a262e6d923a80564e3cfb",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_HEILONGJIANG/seed22/predictions.parquet",
+      "sha256": "c1b3db2e3b10deddbfb6ec51a0187eac3a318f89a4ee435c237b96e054e7d8d9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_HEILONGJIANG/seed33/predictions.parquet",
+      "sha256": "36199b8e982f6451c1763617356b7e8b8ae7e59fbe37386ea8be6ba6332f861b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "sha256": "cffd5c8a33192050342ae662fad91433a548513c3d2fce66aa3d156bb3ff6cc4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_INNER_MONGOLIA/seed22/predictions.parquet",
+      "sha256": "0d3e0000440976ea558e9969a67f9824d0bd8f2e23342cf00a997b31a3e144ec",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_CN_INNER_MONGOLIA/seed33/predictions.parquet",
+      "sha256": "d4b4977781104a4f1ce7320d77bed07e156f7086d9650e030c1b8a8dbf6743d0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_JP/seed11/predictions.parquet",
+      "sha256": "35697885d71f08835c6c6a3e7fcb5d65dfca35c160ac748cf9cf41da1bd66a4d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_JP/seed22/predictions.parquet",
+      "sha256": "01ea5c96a946aac6211bb7ac0169d36fd5c87bc70c1fb41b06e27fc65cb74bfc",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_JP/seed33/predictions.parquet",
+      "sha256": "5962ec8a754f02b4903d5bbe351d9b9708ff91862332417355a93a7336aadba1",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_MN/seed11/predictions.parquet",
+      "sha256": "d9f34f5c5da3f5bfc2c30bd35f69028525dd60bdded4a88a2c461b2c332fc121",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_MN/seed22/predictions.parquet",
+      "sha256": "07983ddf189971bf62391089482ca06ef1e021d1efd09c2a77424daaecfc2aff",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU_OCC/F_OCC_MN/seed33/predictions.parquet",
+      "sha256": "c188c06fb70064a39d17fb8abfc3d05daf2d498c571eabfa4de12a5c83946c52",
+      "sidecar": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_CN_JILIN seed11 ep0 train=0.5272 val=0.5221 56.3s
+C_GCNGRU DROP_CN_JILIN seed11 ep1 train=0.4715 val=0.5036 56.3s
+C_GCNGRU DROP_CN_JILIN seed11 ep2 train=0.4477 val=0.4959 56.41s
+C_GCNGRU DROP_CN_JILIN seed11 ep3 train=0.4373 val=0.4855 56.5s
+C_GCNGRU DROP_CN_JILIN seed11 ep4 train=0.4301 val=0.4867 57.0s
+C_GCNGRU DROP_CN_JILIN seed11 ep5 train=0.4258 val=0.4940 56.69s
+C_GCNGRU DROP_CN_JILIN seed11 ep6 train=0.4222 val=0.4805 56.7s
+C_GCNGRU DROP_CN_JILIN seed11 ep7 train=0.4180 val=0.4769 56.7s
+C_GCNGRU DROP_CN_JILIN seed11 ep8 train=0.4137 val=0.4816 56.4s
+C_GCNGRU DROP_CN_JILIN seed11 ep9 train=0.4121 val=0.4779 56.3s
+C_GCNGRU DROP_CN_JILIN seed11 ep10 train=0.4078 val=0.4810 55.89s
+C_GCNGRU DROP_CN_JILIN seed11 ep11 train=0.4081 val=0.4897 56.61s
+C_GCNGRU DROP_CN_JILIN seed11 ep12 train=0.4047 val=0.4777 56.19s
+C_GCNGRU DROP_CN_JILIN seed11 ep13 train=0.4016 val=0.4785 56.0s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_CN_JILIN",
+ "seed": 11,
+ "nodes": 592,
+ "parameters": 10692,
+ "best_val_loss": 0.4769023656845093,
+ "best_epoch": 7,
+ "epochs_run": 14,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 854.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

@@ -1,0 +1,44 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_CN_SHANDONG seed11 ep0 train=0.5267 val=0.5238 32.42s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep1 train=0.4772 val=0.5171 30.56s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep2 train=0.4596 val=0.5056 30.4s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep3 train=0.4469 val=0.4934 31.4s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep4 train=0.4392 val=0.4937 32.4s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep5 train=0.4337 val=0.5040 31.1s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep6 train=0.4302 val=0.4865 34.4s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep7 train=0.4265 val=0.4822 30.8s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep8 train=0.4220 val=0.4877 32.9s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep9 train=0.4205 val=0.4823 31.2s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep10 train=0.4158 val=0.4859 31.0s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep11 train=0.4156 val=0.4959 30.5s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep12 train=0.4127 val=0.4834 31.6s
+C_GCNGRU ADD_CN_SHANDONG seed11 ep13 train=0.4085 val=0.4846 30.8s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_CN_SHANDONG",
+ "seed": 11,
+ "nodes": 522,
+ "parameters": 10692,
+ "best_val_loss": 0.48218268156051636,
+ "best_epoch": 7,
+ "epochs_run": 14,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 454.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

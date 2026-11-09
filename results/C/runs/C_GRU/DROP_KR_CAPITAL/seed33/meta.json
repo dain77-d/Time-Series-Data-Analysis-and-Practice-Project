@@ -1,0 +1,77 @@
+{
+ "model": "C_GRU",
+ "condition": "DROP_KR_CAPITAL",
+ "seed": 33,
+ "nodes": 439,
+ "parameters": 86788,
+ "best_val_loss": 0.42530256509780884,
+ "best_epoch": 1,
+ "epochs_run": 8,
+ "history": [
+  {
+   "epoch": 0,
+   "train_loss": 0.47589075761119815,
+   "val_loss": 0.5021578669548035,
+   "seconds": 10.91
+  },
+  {
+   "epoch": 1,
+   "train_loss": 0.37507519696968317,
+   "val_loss": 0.42530256509780884,
+   "seconds": 10.19
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.3060696885316041,
+   "val_loss": 0.43409430980682373,
+   "seconds": 10.12
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.2630491654803283,
+   "val_loss": 0.4293420910835266,
+   "seconds": 9.58
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.24123647161861406,
+   "val_loss": 0.4560464322566986,
+   "seconds": 9.81
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.21311864882272524,
+   "val_loss": 0.48229339718818665,
+   "seconds": 10.18
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.19884919750429417,
+   "val_loss": 0.5138059258460999,
+   "seconds": 9.4
+  },
+  {
+   "epoch": 7,
+   "train_loss": 0.18710412019795744,
+   "val_loss": 0.5190387964248657,
+   "seconds": 9.82
+  }
+ ],
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 93.9,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

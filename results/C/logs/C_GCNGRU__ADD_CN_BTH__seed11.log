@@ -1,0 +1,58 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_CN_BTH seed11 ep0 train=0.5269 val=0.5240 31.14s
+C_GCNGRU ADD_CN_BTH seed11 ep1 train=0.4770 val=0.5160 29.66s
+C_GCNGRU ADD_CN_BTH seed11 ep2 train=0.4588 val=0.5047 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep3 train=0.4457 val=0.4926 29.8s
+C_GCNGRU ADD_CN_BTH seed11 ep4 train=0.4381 val=0.4925 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep5 train=0.4322 val=0.5044 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep6 train=0.4285 val=0.4854 29.8s
+C_GCNGRU ADD_CN_BTH seed11 ep7 train=0.4252 val=0.4815 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep8 train=0.4203 val=0.4874 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep9 train=0.4183 val=0.4813 29.8s
+C_GCNGRU ADD_CN_BTH seed11 ep10 train=0.4139 val=0.4847 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep11 train=0.4133 val=0.4969 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep12 train=0.4106 val=0.4802 29.04s
+C_GCNGRU ADD_CN_BTH seed11 ep13 train=0.4073 val=0.4839 29.76s
+C_GCNGRU ADD_CN_BTH seed11 ep14 train=0.4052 val=0.4795 28.97s
+C_GCNGRU ADD_CN_BTH seed11 ep15 train=0.4039 val=0.4823 29.73s
+C_GCNGRU ADD_CN_BTH seed11 ep16 train=0.4027 val=0.4836 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep17 train=0.3988 val=0.4779 29.9s
+C_GCNGRU ADD_CN_BTH seed11 ep18 train=0.3989 val=0.4828 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep19 train=0.3967 val=0.4812 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep20 train=0.3959 val=0.4814 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep21 train=0.3946 val=0.4770 28.6s
+C_GCNGRU ADD_CN_BTH seed11 ep22 train=0.3918 val=0.4836 27.7s
+C_GCNGRU ADD_CN_BTH seed11 ep23 train=0.3903 val=0.4857 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep24 train=0.3887 val=0.4888 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep25 train=0.3880 val=0.4835 29.7s
+C_GCNGRU ADD_CN_BTH seed11 ep26 train=0.3873 val=0.4845 29.8s
+C_GCNGRU ADD_CN_BTH seed11 ep27 train=0.3851 val=0.4781 29.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_CN_BTH",
+ "seed": 11,
+ "nodes": 524,
+ "parameters": 10692,
+ "best_val_loss": 0.4769519567489624,
+ "best_epoch": 21,
+ "epochs_run": 28,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 845.6,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

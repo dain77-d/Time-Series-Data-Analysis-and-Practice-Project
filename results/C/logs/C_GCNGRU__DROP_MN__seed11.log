@@ -1,0 +1,12 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_MN seed11 ep0 train=0.5273 val=0.5215 36.49s
+C_GCNGRU DROP_MN seed11 ep1 train=0.4707 val=0.5015 30.4s
+C_GCNGRU DROP_MN seed11 ep2 train=0.4466 val=0.4938 30.9s
+C_GCNGRU DROP_MN seed11 ep3 train=0.4362 val=0.4845 31.3s
+C_GCNGRU DROP_MN seed11 ep4 train=0.4295 val=0.4859 31.79s
+C_GCNGRU DROP_MN seed11 ep5 train=0.4248 val=0.4921 31.0s
+C_GCNGRU DROP_MN seed11 ep6 train=0.4211 val=0.4787 33.2s
+C_GCNGRU DROP_MN seed11 ep7 train=0.4168 val=0.4759 32.9s
+C_GCNGRU DROP_MN seed11 ep8 train=0.4129 val=0.4805 31.81s

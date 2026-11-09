@@ -1,0 +1,56 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_CN_LIAONING seed33 ep0 train=0.5246 val=0.5256 31.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep1 train=0.4736 val=0.5080 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep2 train=0.4547 val=0.5074 29.8s
+C_GCNGRU ADD_CN_LIAONING seed33 ep3 train=0.4403 val=0.4882 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep4 train=0.4346 val=0.4837 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep5 train=0.4294 val=0.4844 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep6 train=0.4224 val=0.4825 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep7 train=0.4217 val=0.4799 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep8 train=0.4179 val=0.4801 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep9 train=0.4154 val=0.4802 29.62s
+C_GCNGRU ADD_CN_LIAONING seed33 ep10 train=0.4127 val=0.4871 29.68s
+C_GCNGRU ADD_CN_LIAONING seed33 ep11 train=0.4101 val=0.4863 29.1s
+C_GCNGRU ADD_CN_LIAONING seed33 ep12 train=0.4071 val=0.4793 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep13 train=0.4066 val=0.4852 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep14 train=0.4032 val=0.4879 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep15 train=0.4010 val=0.4867 29.9s
+C_GCNGRU ADD_CN_LIAONING seed33 ep16 train=0.3991 val=0.4788 29.8s
+C_GCNGRU ADD_CN_LIAONING seed33 ep17 train=0.3960 val=0.4827 29.8s
+C_GCNGRU ADD_CN_LIAONING seed33 ep18 train=0.3943 val=0.4841 29.64s
+C_GCNGRU ADD_CN_LIAONING seed33 ep19 train=0.3933 val=0.4763 29.8s
+C_GCNGRU ADD_CN_LIAONING seed33 ep20 train=0.3920 val=0.4876 28.33s
+C_GCNGRU ADD_CN_LIAONING seed33 ep21 train=0.3906 val=0.4877 28.77s
+C_GCNGRU ADD_CN_LIAONING seed33 ep22 train=0.3884 val=0.4856 29.9s
+C_GCNGRU ADD_CN_LIAONING seed33 ep23 train=0.3861 val=0.4832 29.7s
+C_GCNGRU ADD_CN_LIAONING seed33 ep24 train=0.3833 val=0.4787 29.69s
+C_GCNGRU ADD_CN_LIAONING seed33 ep25 train=0.3832 val=0.4917 29.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_CN_LIAONING",
+ "seed": 33,
+ "nodes": 533,
+ "parameters": 10692,
+ "best_val_loss": 0.47627222537994385,
+ "best_epoch": 19,
+ "epochs_run": 26,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 790.8,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

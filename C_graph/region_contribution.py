@@ -24,8 +24,13 @@ RUNS = cdata.RUNS
 CONDS = ["cold_season", "route_group", "wind_sector", "traj_wind_sector"]
 
 
-def ensemble(model, cond, split):
-    fs = sorted((RUNS / model / cond).glob("seed*/predictions.parquet"))
+def seeds(model, cond):
+    return {p.parent.name for p in (RUNS / model / cond).glob("seed*/predictions.parquet")}
+
+
+def ensemble(model, cond, split, only=None):
+    """seed-mean prediction; `only` restricts to these seed dirs so both sides of a difference use the same seeds."""
+    fs = sorted(f for f in (RUNS / model / cond).glob("seed*/predictions.parquet") if only is None or f.parent.name in only)
     if not fs:
         return None
     p = pd.concat([pd.read_parquet(f) for f in fs])
@@ -58,14 +63,20 @@ def main(split, root):
             for h, gh in g.groupby(level="horizon"):
                 y, f0 = gh.y_true.to_numpy(), gh[base.name].to_numpy()
                 rec = {"model": m, "region": r, "n_stations": len(keys), "horizon": h, "rmse_F": rmse(f0 - y)}
-                for name, s in (("dependence_occlusion", occ), ("unique_info_drop", drop)):
-                    if s is not None:
-                        v = s.reindex(gh.index).to_numpy()
-                        rec[name] = rmse(v - y) - rec["rmse_F"]
-                        rec[name + "_pct"] = 100 * rec[name] / rec["rmse_F"]
+                if occ is not None:
+                    rec["dependence_occlusion"] = rmse(occ.reindex(gh.index).to_numpy() - y) - rec["rmse_F"]
+                    rec["dependence_occlusion_pct"] = 100 * rec["dependence_occlusion"] / rec["rmse_F"]
+                if drop is not None:            # F over the seeds DROP_r has (seed-ensemble size must match)
+                    sd = seeds(m, f"DROP_{r}")
+                    fb = ensemble(m, "F", split, sd).reindex(gh.index).to_numpy()
+                    rec["unique_info_drop"] = rmse(drop.reindex(gh.index).to_numpy() - y) - rmse(fb - y)
+                    rec["unique_info_drop_pct"] = 100 * rec["unique_info_drop"] / rmse(fb - y)
+                    rec["n_seeds_drop"] = len(sd)
                 if add is not None and dn is not None:
-                    a_, d_ = add.reindex(gh.index).to_numpy(), dn.reindex(gh.index).to_numpy()
+                    sa = seeds(m, f"ADD_{r}")
+                    a_, d_ = add.reindex(gh.index).to_numpy(), ensemble(m, "DN", split, sa).reindex(gh.index).to_numpy()
                     rec["added_info_add"] = rmse(d_ - y) - rmse(a_ - y)
+                    rec["n_seeds_add"] = len(sa)
                 rows.append(rec)
                 if occ is not None:
                     v = occ.reindex(gh.index).to_numpy()

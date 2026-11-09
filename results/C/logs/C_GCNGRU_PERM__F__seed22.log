@@ -1,0 +1,56 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU_PERM F seed22 ep0 train=0.5404 val=0.5563 38.6s
+C_GCNGRU_PERM F seed22 ep1 train=0.4970 val=0.5391 41.69s
+C_GCNGRU_PERM F seed22 ep2 train=0.4853 val=0.5412 40.5s
+C_GCNGRU_PERM F seed22 ep3 train=0.4779 val=0.5337 43.4s
+C_GCNGRU_PERM F seed22 ep4 train=0.4716 val=0.5268 41.9s
+C_GCNGRU_PERM F seed22 ep5 train=0.4686 val=0.5324 44.1s
+C_GCNGRU_PERM F seed22 ep6 train=0.4635 val=0.5261 41.5s
+C_GCNGRU_PERM F seed22 ep7 train=0.4586 val=0.5246 41.8s
+C_GCNGRU_PERM F seed22 ep8 train=0.4545 val=0.5228 38.6s
+C_GCNGRU_PERM F seed22 ep9 train=0.4542 val=0.5294 28.7s
+C_GCNGRU_PERM F seed22 ep10 train=0.4517 val=0.5236 38.0s
+C_GCNGRU_PERM F seed22 ep11 train=0.4493 val=0.5232 41.3s
+C_GCNGRU_PERM F seed22 ep12 train=0.4475 val=0.5289 44.4s
+C_GCNGRU_PERM F seed22 ep13 train=0.4455 val=0.5225 35.0s
+C_GCNGRU_PERM F seed22 ep14 train=0.4439 val=0.5218 38.8s
+C_GCNGRU_PERM F seed22 ep15 train=0.4440 val=0.5231 38.8s
+C_GCNGRU_PERM F seed22 ep16 train=0.4418 val=0.5300 35.9s
+C_GCNGRU_PERM F seed22 ep17 train=0.4385 val=0.5181 41.5s
+C_GCNGRU_PERM F seed22 ep18 train=0.4375 val=0.5230 41.0s
+C_GCNGRU_PERM F seed22 ep19 train=0.4356 val=0.5172 37.9s
+C_GCNGRU_PERM F seed22 ep20 train=0.4361 val=0.5332 38.2s
+C_GCNGRU_PERM F seed22 ep21 train=0.4349 val=0.5208 29.7s
+C_GCNGRU_PERM F seed22 ep22 train=0.4327 val=0.5302 38.8s
+C_GCNGRU_PERM F seed22 ep23 train=0.4328 val=0.5240 39.6s
+C_GCNGRU_PERM F seed22 ep24 train=0.4335 val=0.5192 41.6s
+C_GCNGRU_PERM F seed22 ep25 train=0.4308 val=0.5252 36.7s
+{
+ "model": "C_GCNGRU_PERM",
+ "condition": "F",
+ "seed": 22,
+ "nodes": 601,
+ "parameters": 10692,
+ "best_val_loss": 0.5172167420387268,
+ "best_epoch": 19,
+ "epochs_run": 26,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 1032.3,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

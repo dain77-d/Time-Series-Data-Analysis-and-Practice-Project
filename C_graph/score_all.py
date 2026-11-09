@@ -33,6 +33,18 @@ def e(model, cond):
     return f"{model}|{cond}|ensemble"
 
 
+def n_seeds(model, cond):
+    return len(list((RUNS / model / cond).glob("seed*/predictions.parquet")))
+
+
+def fair(pair):
+    """'a:b' of two ensembles -> seed-11 vs seed-11 when either side has fewer than 3 seeds (ensembles must match in size)."""
+    a, b = pair.split(":")
+    if all(n_seeds(*x.split("|")[:2]) == 3 for x in (a, b)):
+        return pair
+    return ":".join(x.replace("|ensemble", "|seed|seed=11") for x in (a, b))
+
+
 def families(root):
     conds, regions = cdata.conditions(root)
     drop = sorted(c for c in conds if c.startswith("DROP_"))
@@ -63,7 +75,7 @@ def main(split, final, root):
         cmd += ["--final"] if final else []
         # keep only pairs whose runs exist
         have = {(p.parts[-4], p.parts[-3]) for p in fs}
-        ok = [p for p in pairs if all(tuple(x.split("|")[:2]) in have for x in p.split(":"))]
+        ok = [fair(p) for p in pairs if all(tuple(x.split("|")[:2]) in have for x in p.split(":"))]
         if ok:
             cmd += ["--pairs", *ok]
         r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")

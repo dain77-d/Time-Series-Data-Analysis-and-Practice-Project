@@ -1,0 +1,233 @@
+C_GRU 11 KR_CAPITAL 162
+C_GRU 11 KR_GANGWON 30
+C_GRU 11 KR_CHUNGCHEONG 85
+C_GRU 11 KR_HONAM 86
+C_GRU 11 KR_DAEGYEONG 60
+C_GRU 11 KR_DONGNAM 82
+C_GRU 11 KR_JEJU 9
+C_GRU 11 CN_SHANDONG 7
+C_GRU 11 CN_BTH 9
+C_GRU 11 CN_LIAONING 18
+C_GRU 11 CN_JILIN 9
+C_GRU 11 CN_HEILONGJIANG 6
+C_GRU 11 CN_INNER_MONGOLIA 12
+C_GRU 11 JP 24
+C_GRU 11 MN 1
+C_GRU 22 KR_CAPITAL 162
+C_GRU 22 KR_GANGWON 30
+C_GRU 22 KR_CHUNGCHEONG 85
+C_GRU 22 KR_HONAM 86
+C_GRU 22 KR_DAEGYEONG 60
+C_GRU 22 KR_DONGNAM 82
+C_GRU 22 KR_JEJU 9
+C_GRU 22 CN_SHANDONG 7
+C_GRU 22 CN_BTH 9
+C_GRU 22 CN_LIAONING 18
+C_GRU 22 CN_JILIN 9
+C_GRU 22 CN_HEILONGJIANG 6
+C_GRU 22 CN_INNER_MONGOLIA 12
+C_GRU 22 JP 24
+C_GRU 22 MN 1
+C_GRU 33 KR_CAPITAL 162
+C_GRU 33 KR_GANGWON 30
+C_GRU 33 KR_CHUNGCHEONG 85
+C_GRU 33 KR_HONAM 86
+C_GRU 33 KR_DAEGYEONG 60
+C_GRU 33 KR_DONGNAM 82
+C_GRU 33 KR_JEJU 9
+C_GRU 33 CN_SHANDONG 7
+C_GRU 33 CN_BTH 9
+C_GRU 33 CN_LIAONING 18
+C_GRU 33 CN_JILIN 9
+C_GRU 33 CN_HEILONGJIANG 6
+C_GRU 33 CN_INNER_MONGOLIA 12
+C_GRU 33 JP 24
+C_GRU 33 MN 1
+C_GCNGRU 11 KR_CAPITAL 162
+C_GCNGRU 11 KR_GANGWON 30
+C_GCNGRU 11 KR_CHUNGCHEONG 85
+C_GCNGRU 11 KR_HONAM 86
+C_GCNGRU 11 KR_DAEGYEONG 60
+C_GCNGRU 11 KR_DONGNAM 82
+C_GCNGRU 11 KR_JEJU 9
+C_GCNGRU 11 CN_SHANDONG 7
+C_GCNGRU 11 CN_BTH 9
+C_GCNGRU 11 CN_LIAONING 18
+C_GCNGRU 11 CN_JILIN 9
+C_GCNGRU 11 CN_HEILONGJIANG 6
+C_GCNGRU 11 CN_INNER_MONGOLIA 12
+C_GCNGRU 11 JP 24
+C_GCNGRU 11 MN 1
+C_GCNGRU 22 KR_CAPITAL 162
+C_GCNGRU 22 KR_GANGWON 30
+C_GCNGRU 22 KR_CHUNGCHEONG 85
+C_GCNGRU 22 KR_HONAM 86
+C_GCNGRU 22 KR_DAEGYEONG 60
+C_GCNGRU 22 KR_DONGNAM 82
+C_GCNGRU 22 KR_JEJU 9
+C_GCNGRU 22 CN_SHANDONG 7
+C_GCNGRU 22 CN_BTH 9
+C_GCNGRU 22 CN_LIAONING 18
+C_GCNGRU 22 CN_JILIN 9
+C_GCNGRU 22 CN_HEILONGJIANG 6
+C_GCNGRU 22 CN_INNER_MONGOLIA 12
+C_GCNGRU 22 JP 24
+C_GCNGRU 22 MN 1
+C_GCNGRU 33 KR_CAPITAL 162
+C_GCNGRU 33 KR_GANGWON 30
+C_GCNGRU 33 KR_CHUNGCHEONG 85
+C_GCNGRU 33 KR_HONAM 86
+C_GCNGRU 33 KR_DAEGYEONG 60
+C_GCNGRU 33 KR_DONGNAM 82
+C_GCNGRU 33 KR_JEJU 9
+C_GCNGRU 33 CN_SHANDONG 7
+C_GCNGRU 33 CN_BTH 9
+C_GCNGRU 33 CN_LIAONING 18
+C_GCNGRU 33 CN_JILIN 9
+C_GCNGRU 33 CN_HEILONGJIANG 6
+C_GCNGRU 33 CN_INNER_MONGOLIA 12
+C_GCNGRU 33 JP 24
+C_GCNGRU 33 MN 1
+TRAIN_DONE2
+scored core 21 files
+scored regional_C_GRU 75 files
+scored controls_C_GRU 12 files
+scored occlusion_C_GRU 48 files
+regional_C_GCNGRU FAILED
+ Traceback (most recent call last):
+  File "/workspace/tsda/data_v5/Model/Common/score.py", line 441, in <module>
+    main()
+  File "/workspace/tsda/data_v5/Model/Common/score.py", line 425, in main
+    result = score_frames(g, pd.concat(frames, ignore_index=True), args.split, args.models, args.pairs,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tsda/data_v5/Model/Common/score.py", line 313, in score_frames
+    resolved = (_resolve_model_alias(a, runs), _resolve_model_alias(b, runs))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tsda/data_v5/Model/Common/score.py", line 275, in _resolve_model_alias
+    raise ValueError(f'Comparison alias {alias!r} is ambiguous/absent; supply an exact run_id.')
+ValueError: Comparison alias 'C_GCNGRU|DROP_CN_BTH|ensemble' is ambiguous/absent; supply an exact run_id.
+
+scored controls_C_GCNGRU 12 files
+scored occlusion_C_GCNGRU 48 files
+   model            region  n_stations  horizon  rmse_F  dependence_occlusion  dependence_occlusion_pct  unique_info_drop  unique_info_drop_pct  added_info_add
+   C_GRU        KR_CAPITAL         162        3    6.19                  0.55                      8.95              0.36                  5.83             NaN
+   C_GRU        KR_CAPITAL         162        6    8.28                  1.27                     15.35              0.34                  4.16             NaN
+   C_GRU        KR_CAPITAL         162       12   10.43                  4.31                     41.29             -0.08                 -0.78             NaN
+   C_GRU        KR_CAPITAL         162       24   11.82                  8.61                     72.86             -0.08                 -0.69             NaN
+   C_GRU        KR_GANGWON          30        3    6.19                  0.35                      5.71             -0.11                 -1.73             NaN
+   C_GRU        KR_GANGWON          30        6    8.28                  0.71                      8.54             -0.22                 -2.64             NaN
+   C_GRU        KR_GANGWON          30       12   10.43                  0.73                      7.04             -0.34                 -3.28             NaN
+   C_GRU        KR_GANGWON          30       24   11.82                  0.75                      6.35              0.03                  0.29             NaN
+   C_GRU    KR_CHUNGCHEONG          85        3    6.19                 -0.01                     -0.15             -0.14                 -2.30             NaN
+   C_GRU    KR_CHUNGCHEONG          85        6    8.28                 -0.06                     -0.74             -0.11                 -1.29             NaN
+   C_GRU    KR_CHUNGCHEONG          85       12   10.43                  0.01                      0.06              0.03                  0.30             NaN
+   C_GRU    KR_CHUNGCHEONG          85       24   11.82                  0.44                      3.72              0.32                  2.72             NaN
+   C_GRU          KR_HONAM          86        3    6.19                  0.11                      1.81             -0.14                 -2.31             NaN
+   C_GRU          KR_HONAM          86        6    8.28                  0.39                      4.73             -0.05                 -0.65             NaN
+   C_GRU          KR_HONAM          86       12   10.43                  0.60                      5.80              0.01                  0.13             NaN
+   C_GRU          KR_HONAM          86       24   11.82                  0.79                      6.66              0.28                  2.38             NaN
+   C_GRU      KR_DAEGYEONG          60        3    6.19                  0.01                      0.22              0.02                  0.27             NaN
+   C_GRU      KR_DAEGYEONG          60        6    8.28                  0.03                      0.35             -0.04                 -0.50             NaN
+   C_GRU      KR_DAEGYEONG          60       12   10.43                  0.12                      1.14             -0.05                 -0.50             NaN
+   C_GRU      KR_DAEGYEONG          60       24   11.82                  0.24                      2.06              0.06                  0.51             NaN
+   C_GRU        KR_DONGNAM          82        3    6.19                 -0.01                     -0.13              0.12                  1.88             NaN
+   C_GRU        KR_DONGNAM          82        6    8.28                 -0.01                     -0.15              0.10                  1.17             NaN
+   C_GRU        KR_DONGNAM          82       12   10.43                  0.08                      0.77             -0.03                 -0.27             NaN
+   C_GRU        KR_DONGNAM          82       24   11.82                  0.22                      1.87              0.08                  0.69             NaN
+   C_GRU           KR_JEJU           9        3    6.19                 -0.02                     -0.39              0.16                  2.65             NaN
+   C_GRU           KR_JEJU           9        6    8.28                 -0.05                     -0.59              0.35                  4.28             NaN
+   C_GRU           KR_JEJU           9       12   10.43                 -0.02                     -0.24              0.13                  1.29             NaN
+   C_GRU           KR_JEJU           9       24   11.82                  0.03                      0.29              0.13                  1.11             NaN
+   C_GRU       CN_SHANDONG           7        3    6.19                  0.07                      1.11             -0.07                 -1.19            0.03
+   C_GRU       CN_SHANDONG           7        6    8.28                  0.21                      2.52             -0.20                 -2.41           -0.12
+   C_GRU       CN_SHANDONG           7       12   10.43                  0.29                      2.82             -0.10                 -1.00           -0.18
+   C_GRU       CN_SHANDONG           7       24   11.82                  0.35                      2.98              0.19                  1.64            0.22
+   C_GRU            CN_BTH           9        3    6.19                  0.02                      0.25             -0.01                 -0.12            0.18
+   C_GRU            CN_BTH           9        6    8.28                  0.07                      0.87              0.10                  1.24            0.07
+   C_GRU            CN_BTH           9       12   10.43                  0.05                      0.46             -0.09                 -0.85           -0.28
+   C_GRU            CN_BTH           9       24   11.82                  0.13                      1.06              0.03                  0.29           -0.12
+   C_GRU       CN_LIAONING          18        3    6.19                  0.09                      1.49             -0.06                 -0.99            0.25
+   C_GRU       CN_LIAONING          18        6    8.28                  0.26                      3.18             -0.00                 -0.02            0.41
+   C_GRU       CN_LIAONING          18       12   10.43                  0.37                      3.56              0.05                  0.48            0.47
+   C_GRU       CN_LIAONING          18       24   11.82                  0.45                      3.82              0.32                  2.70            0.95
+   C_GRU          CN_JILIN           9        3    6.19                  0.03                      0.42             -0.13                 -2.14           -0.02
+   C_GRU          CN_JILIN           9        6    8.28                  0.08                      0.97             -0.13                 -1.54           -0.04
+   C_GRU          CN_JILIN           9       12   10.43                  0.13                      1.25             -0.03                 -0.32            0.04
+   C_GRU          CN_JILIN           9       24   11.82                  0.14                      1.14              0.27                  2.31            0.40
+   C_GRU   CN_HEILONGJIANG           6        3    6.19                  0.02                      0.36              0.01                  0.22            0.15
+   C_GRU   CN_HEILONGJIANG           6        6    8.28                  0.07                      0.79             -0.02                 -0.20            0.22
+   C_GRU   CN_HEILONGJIANG           6       12   10.43                  0.05                      0.47             -0.13                 -1.24            0.06
+   C_GRU   CN_HEILONGJIANG           6       24   11.82                  0.08                      0.65              0.16                  1.35           -0.04
+   C_GRU CN_INNER_MONGOLIA          12        3    6.19                  0.02                      0.35              0.08                  1.24            0.11
+   C_GRU CN_INNER_MONGOLIA          12        6    8.28                  0.07                      0.86             -0.00                 -0.03            0.13
+   C_GRU CN_INNER_MONGOLIA          12       12   10.43                  0.11                      1.08              0.10                  0.96            0.12
+   C_GRU CN_INNER_MONGOLIA          12       24   11.82                  0.14                      1.22              0.26                  2.16            0.44
+   C_GRU                JP          24        3    6.19                  0.09                      1.40             -0.12                 -1.90            0.01
+   C_GRU                JP          24        6    8.28                  0.15                      1.79             -0.27                 -3.26           -0.05
+   C_GRU                JP          24       12   10.43                  0.11                      1.06             -0.29                 -2.77           -0.17
+   C_GRU                JP          24       24   11.82                 -0.03                     -0.29             -0.05                 -0.43            0.06
+   C_GRU                MN           1        3    6.19                  0.00                      0.02              0.09                  1.53            0.18
+   C_GRU                MN           1        6    8.28                  0.00                      0.06              0.20                  2.45            0.11
+   C_GRU                MN           1       12   10.43                  0.00                      0.04              0.22                  2.08           -0.20
+   C_GRU                MN           1       24   11.82                  0.00                      0.00              0.26                  2.21           -0.16
+C_GCNGRU        KR_CAPITAL         162        3    6.76                  0.48                      7.03              0.18                  2.71             NaN
+C_GCNGRU        KR_CAPITAL         162        6    8.98                  1.54                     17.11              0.28                  3.11             NaN
+C_GCNGRU        KR_CAPITAL         162       12   10.99                  4.10                     37.31              0.27                  2.43             NaN
+C_GCNGRU        KR_CAPITAL         162       24   12.28                  5.95                     48.48              0.19                  1.56             NaN
+C_GCNGRU        KR_GANGWON          30        3    6.76                 -0.00                     -0.06              0.12                  1.76             NaN
+C_GCNGRU        KR_GANGWON          30        6    8.98                 -0.01                     -0.17              0.25                  2.76             NaN
+C_GCNGRU        KR_GANGWON          30       12   10.99                 -0.02                     -0.15              0.19                  1.76             NaN
+C_GCNGRU        KR_GANGWON          30       24   12.28                 -0.10                     -0.85             -0.01                 -0.11             NaN
+C_GCNGRU    KR_CHUNGCHEONG          85        3    6.76                 -0.01                     -0.08              0.06                  0.87             NaN
+C_GCNGRU    KR_CHUNGCHEONG          85        6    8.98                  0.00                      0.01              0.05                  0.57             NaN
+C_GCNGRU    KR_CHUNGCHEONG          85       12   10.99                  0.04                      0.40              0.06                  0.51             NaN
+C_GCNGRU    KR_CHUNGCHEONG          85       24   12.28                 -0.11                     -0.90              0.02                  0.14             NaN
+C_GCNGRU          KR_HONAM          86        3    6.76                  0.02                      0.24              0.08                  1.24             NaN
+C_GCNGRU          KR_HONAM          86        6    8.98                  0.08                      0.89              0.16                  1.80             NaN
+C_GCNGRU          KR_HONAM          86       12   10.99                  0.14                      1.32              0.09                  0.83             NaN
+C_GCNGRU          KR_HONAM          86       24   12.28                  0.10                      0.79             -0.15                 -1.23             NaN
+C_GCNGRU      KR_DAEGYEONG          60        3    6.76                 -0.00                     -0.02              0.13                  1.88             NaN
+C_GCNGRU      KR_DAEGYEONG          60        6    8.98                  0.01                      0.12              0.26                  2.93             NaN
+C_GCNGRU      KR_DAEGYEONG          60       12   10.99                  0.01                      0.07              0.15                  1.34             NaN
+C_GCNGRU      KR_DAEGYEONG          60       24   12.28                 -0.01                     -0.11             -0.08                 -0.67             NaN
+C_GCNGRU        KR_DONGNAM          82        3    6.76                  0.04                      0.53              0.07                  1.11             NaN
+C_GCNGRU        KR_DONGNAM          82        6    8.98                  0.13                      1.45              0.10                  1.14             NaN
+C_GCNGRU        KR_DONGNAM          82       12   10.99                  0.26                      2.35             -0.06                 -0.54             NaN
+C_GCNGRU        KR_DONGNAM          82       24   12.28                  0.38                      3.10             -0.35                 -2.84             NaN
+C_GCNGRU           KR_JEJU           9        3    6.76                  0.00                      0.03              0.12                  1.81             NaN
+C_GCNGRU           KR_JEJU           9        6    8.98                  0.01                      0.11              0.24                  2.72             NaN
+C_GCNGRU           KR_JEJU           9       12   10.99                  0.02                      0.21              0.19                  1.72             NaN
+C_GCNGRU           KR_JEJU           9       24   12.28                  0.04                      0.30              0.05                  0.43             NaN
+C_GCNGRU       CN_SHANDONG           7        3    6.76                  0.01                      0.10              0.11                  1.64           -0.00
+C_GCNGRU       CN_SHANDONG           7        6    8.98                  0.02                      0.25              0.17                  1.93           -0.03
+C_GCNGRU       CN_SHANDONG           7       12   10.99                  0.06                      0.51              0.07                  0.67           -0.06
+C_GCNGRU       CN_SHANDONG           7       24   12.28                  0.12                      0.97             -0.12                 -1.00           -0.06
+C_GCNGRU            CN_BTH           9        3    6.76                  0.00                      0.02              0.13                  1.86            0.04
+C_GCNGRU            CN_BTH           9        6    8.98                  0.01                      0.09              0.23                  2.61            0.04
+C_GCNGRU            CN_BTH           9       12   10.99                  0.01                      0.12              0.15                  1.39           -0.03
+C_GCNGRU            CN_BTH           9       24   12.28                  0.11                      0.89              0.06                  0.50           -0.06
+C_GCNGRU       CN_LIAONING          18        3    6.76                  0.01                      0.12              0.16                  2.31            0.02
+C_GCNGRU       CN_LIAONING          18        6    8.98                  0.04                      0.43              0.31                  3.51           -0.01
+C_GCNGRU       CN_LIAONING          18       12   10.99                  0.13                      1.21              0.27                  2.48            0.06
+C_GCNGRU       CN_LIAONING          18       24   12.28                  0.29                      2.35              0.11                  0.88           -0.02
+C_GCNGRU          CN_JILIN           9        3    6.76                  0.00                      0.04              0.14                  2.11            0.00
+C_GCNGRU          CN_JILIN           9        6    8.98                  0.02                      0.18              0.30                  3.35           -0.03
+C_GCNGRU          CN_JILIN           9       12   10.99                  0.05                      0.49              0.26                  2.37           -0.04
+C_GCNGRU          CN_JILIN           9       24   12.28                  0.10                      0.84              0.04                  0.33           -0.01
+C_GCNGRU   CN_HEILONGJIANG           6        3    6.76                  0.00                      0.02              0.13                  1.95            0.05
+C_GCNGRU   CN_HEILONGJIANG           6        6    8.98                  0.01                      0.13              0.28                  3.07            0.03
+C_GCNGRU   CN_HEILONGJIANG           6       12   10.99                  0.03                      0.23              0.20                  1.78           -0.00
+C_GCNGRU   CN_HEILONGJIANG           6       24   12.28                  0.06                      0.52             -0.02                 -0.14           -0.11
+C_GCNGRU CN_INNER_MONGOLIA          12        3    6.76                 -0.00                     -0.00              0.15                  2.23            0.03
+C_GCNGRU CN_INNER_MONGOLIA          12        6    8.98                  0.01                      0.08              0.32                  3.61            0.03
+C_GCNGRU CN_INNER_MONGOLIA          12       12   10.99                  0.03                      0.25              0.25                  2.25           -0.00
+C_GCNGRU CN_INNER_MONGOLIA          12       24   12.28                  0.08                      0.63              0.10                  0.78           -0.06
+C_GCNGRU                JP          24        3    6.76                  0.01                      0.13              0.13                  1.94            0.01
+C_GCNGRU                JP          24        6    8.98                  0.03                      0.33              0.27                  3.03           -0.04
+C_GCNGRU                JP          24       12   10.99                  0.06                      0.57              0.18                  1.68           -0.05
+C_GCNGRU                JP          24       24   12.28                  0.08                      0.63             -0.04                 -0.32           -0.09
+C_GCNGRU                MN           1        3    6.76                 -0.00                     -0.00               NaN                   NaN            0.01
+C_GCNGRU                MN           1        6    8.98                 -0.00                     -0.00               NaN                   NaN           -0.03
+C_GCNGRU                MN           1       12   10.99                 -0.00                     -0.01               NaN                   NaN           -0.09
+C_GCNGRU                MN           1       24   12.28                 -0.00                     -0.01               NaN                   NaN           -0.12
+POST_DONE

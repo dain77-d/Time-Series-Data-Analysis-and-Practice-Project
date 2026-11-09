@@ -1,0 +1,38 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GRU F seed33 ep0 train=0.4396 val=0.4482 4.3s
+C_GRU F seed33 ep1 train=0.3581 val=0.4186 3.81s
+C_GRU F seed33 ep2 train=0.3116 val=0.4270 3.88s
+C_GRU F seed33 ep3 train=0.2750 val=0.4451 3.81s
+C_GRU F seed33 ep4 train=0.2458 val=0.4238 3.96s
+C_GRU F seed33 ep5 train=0.2241 val=0.4970 4.34s
+C_GRU F seed33 ep6 train=0.2076 val=0.4672 3.99s
+C_GRU F seed33 ep7 train=0.1925 val=0.4486 5.81s
+{
+ "model": "C_GRU",
+ "condition": "F",
+ "seed": 33,
+ "nodes": 601,
+ "parameters": 107524,
+ "best_val_loss": 0.41862809658050537,
+ "best_epoch": 1,
+ "epochs_run": 8,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 38.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

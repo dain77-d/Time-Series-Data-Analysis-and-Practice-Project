@@ -1,0 +1,39 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep0 train=0.4524 val=0.4509 3.47s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep1 train=0.3604 val=0.4411 3.08s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep2 train=0.3116 val=0.4176 2.92s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep3 train=0.2752 val=0.4194 2.96s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep4 train=0.2491 val=0.4356 2.87s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep5 train=0.2265 val=0.4512 2.77s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep6 train=0.2128 val=0.4420 2.91s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep7 train=0.1967 val=0.4820 3.05s
+C_GRU ADD_CN_INNER_MONGOLIA seed11 ep8 train=0.1849 val=0.4546 3.02s
+{
+ "model": "C_GRU",
+ "condition": "ADD_CN_INNER_MONGOLIA",
+ "seed": 11,
+ "nodes": 527,
+ "parameters": 98052,
+ "best_val_loss": 0.4175862669944763,
+ "best_epoch": 2,
+ "epochs_run": 9,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 31.1,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

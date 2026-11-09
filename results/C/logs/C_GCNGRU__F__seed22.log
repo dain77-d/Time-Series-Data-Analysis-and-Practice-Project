@@ -1,0 +1,51 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU F seed22 ep0 train=0.5278 val=0.5364 33.64s
+C_GCNGRU F seed22 ep1 train=0.4730 val=0.5040 33.42s
+C_GCNGRU F seed22 ep2 train=0.4493 val=0.4963 32.56s
+C_GCNGRU F seed22 ep3 train=0.4364 val=0.4839 32.72s
+C_GCNGRU F seed22 ep4 train=0.4303 val=0.4842 32.9s
+C_GCNGRU F seed22 ep5 train=0.4262 val=0.4772 32.82s
+C_GCNGRU F seed22 ep6 train=0.4227 val=0.4819 33.11s
+C_GCNGRU F seed22 ep7 train=0.4164 val=0.4740 32.54s
+C_GCNGRU F seed22 ep8 train=0.4122 val=0.4722 33.12s
+C_GCNGRU F seed22 ep9 train=0.4120 val=0.4746 32.58s
+C_GCNGRU F seed22 ep10 train=0.4113 val=0.4799 32.45s
+C_GCNGRU F seed22 ep11 train=0.4079 val=0.4718 32.73s
+C_GCNGRU F seed22 ep12 train=0.4045 val=0.4764 33.07s
+C_GCNGRU F seed22 ep13 train=0.4026 val=0.4815 32.71s
+C_GCNGRU F seed22 ep14 train=0.4013 val=0.4701 30.52s
+C_GCNGRU F seed22 ep15 train=0.3990 val=0.4816 30.46s
+C_GCNGRU F seed22 ep16 train=0.3977 val=0.4809 29.5s
+C_GCNGRU F seed22 ep17 train=0.3943 val=0.4809 29.7s
+C_GCNGRU F seed22 ep18 train=0.3947 val=0.4760 30.4s
+C_GCNGRU F seed22 ep19 train=0.3914 val=0.4771 33.1s
+C_GCNGRU F seed22 ep20 train=0.3902 val=0.4857 32.1s
+{
+ "model": "C_GCNGRU",
+ "condition": "F",
+ "seed": 22,
+ "nodes": 601,
+ "parameters": 10692,
+ "best_val_loss": 0.470088392496109,
+ "best_epoch": 14,
+ "epochs_run": 21,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 685.5,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

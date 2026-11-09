@@ -1,0 +1,56 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep0 train=0.5245 val=0.5260 31.4s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep1 train=0.4750 val=0.5107 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep2 train=0.4585 val=0.5073 29.1s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep3 train=0.4440 val=0.4927 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep4 train=0.4382 val=0.4876 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep5 train=0.4330 val=0.4901 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep6 train=0.4257 val=0.4854 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep7 train=0.4247 val=0.4853 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep8 train=0.4208 val=0.4847 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep9 train=0.4182 val=0.4830 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep10 train=0.4157 val=0.4888 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep11 train=0.4132 val=0.4910 29.9s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep12 train=0.4102 val=0.4816 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep13 train=0.4096 val=0.4860 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep14 train=0.4058 val=0.4881 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep15 train=0.4036 val=0.4877 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep16 train=0.4019 val=0.4799 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep17 train=0.3989 val=0.4856 28.9s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep18 train=0.3968 val=0.4852 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep19 train=0.3965 val=0.4761 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep20 train=0.3947 val=0.4889 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep21 train=0.3929 val=0.4867 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep22 train=0.3901 val=0.4861 29.7s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep23 train=0.3879 val=0.4827 29.8s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep24 train=0.3852 val=0.4793 29.4s
+C_GCNGRU ADD_CN_HEILONGJIANG seed33 ep25 train=0.3844 val=0.4957 29.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "ADD_CN_HEILONGJIANG",
+ "seed": 33,
+ "nodes": 521,
+ "parameters": 10692,
+ "best_val_loss": 0.47607141733169556,
+ "best_epoch": 19,
+ "epochs_run": 26,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 788.0,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

@@ -1,0 +1,51 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU CTRL_JP_EAST seed22 ep0 train=0.5275 val=0.5388 32.38s
+C_GCNGRU CTRL_JP_EAST seed22 ep1 train=0.4799 val=0.5168 30.4s
+C_GCNGRU CTRL_JP_EAST seed22 ep2 train=0.4641 val=0.5165 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep3 train=0.4507 val=0.4969 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep4 train=0.4422 val=0.4939 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep5 train=0.4380 val=0.4884 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep6 train=0.4332 val=0.4922 29.8s
+C_GCNGRU CTRL_JP_EAST seed22 ep7 train=0.4271 val=0.4843 30.1s
+C_GCNGRU CTRL_JP_EAST seed22 ep8 train=0.4230 val=0.4848 30.1s
+C_GCNGRU CTRL_JP_EAST seed22 ep9 train=0.4230 val=0.4850 31.5s
+C_GCNGRU CTRL_JP_EAST seed22 ep10 train=0.4214 val=0.4885 30.2s
+C_GCNGRU CTRL_JP_EAST seed22 ep11 train=0.4184 val=0.4816 30.5s
+C_GCNGRU CTRL_JP_EAST seed22 ep12 train=0.4145 val=0.4854 31.2s
+C_GCNGRU CTRL_JP_EAST seed22 ep13 train=0.4131 val=0.4865 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep14 train=0.4104 val=0.4781 29.64s
+C_GCNGRU CTRL_JP_EAST seed22 ep15 train=0.4105 val=0.4832 30.36s
+C_GCNGRU CTRL_JP_EAST seed22 ep16 train=0.4080 val=0.4887 28.5s
+C_GCNGRU CTRL_JP_EAST seed22 ep17 train=0.4037 val=0.4848 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep18 train=0.4047 val=0.4825 30.5s
+C_GCNGRU CTRL_JP_EAST seed22 ep19 train=0.4018 val=0.4823 29.7s
+C_GCNGRU CTRL_JP_EAST seed22 ep20 train=0.4010 val=0.4947 29.7s
+{
+ "model": "C_GCNGRU",
+ "condition": "CTRL_JP_EAST",
+ "seed": 22,
+ "nodes": 533,
+ "parameters": 10692,
+ "best_val_loss": 0.47809654474258423,
+ "best_epoch": 14,
+ "epochs_run": 21,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 651.9,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

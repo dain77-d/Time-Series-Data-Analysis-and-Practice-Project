@@ -1,0 +1,410 @@
+{
+  "protocol_version": "fixed-calendar-seed-v1.0.0",
+  "split": "validation",
+  "fixed_eligible_by_horizon": {
+    "3": 2531,
+    "6": 2530,
+    "12": 2528,
+    "24": 2524
+  },
+  "fixed_calendar_slots_by_horizon": {
+    "3": 2920,
+    "6": 2920,
+    "12": 2920,
+    "24": 2920
+  },
+  "rows_selected_using_predictions": false,
+  "model_prediction_intersection_used": false,
+  "negative_prediction_rule": "clip each scored forecast at zero; count per run and horizon",
+  "seed_score_summary_is_not_prediction_ensemble": true,
+  "ensemble_rule": "raw-unit arithmetic mean, then nonnegative clip",
+  "hac_default": "max(horizon/3-1,0), Bartlett, exact elapsed-time slots, gaps retained",
+  "hac_lag_override": null,
+  "bootstrap": "moving 7-day=56 calendar-slot blocks; gaps remain inside blocks",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 0,
+  "holm_family": "all finite p-values in this declared scoring invocation (all included horizons/runs/pairs)",
+  "test_guard": false,
+  "does_not_train_models": true,
+  "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
+  "written_kst": "2026-11-09T15:04:09.340636+09:00",
+  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
+  "prediction_sources": [
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DN/seed11/predictions.parquet",
+      "sha256": "9cd5b7aefa4ba35b388897947dd28090cb01ee89c950ab3fc9eee664a3c1fc7a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DN/seed22/predictions.parquet",
+      "sha256": "b91a78fe388b6ef0209ebc5d62e1bc8128cb8fe503d8c30a32d3a2e524d29e0a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DN/seed33/predictions.parquet",
+      "sha256": "4b3d72a12bfb1430381d3f62696cb7edd96a3337c22361723108e512bbed829f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed11/predictions.parquet",
+      "sha256": "c8b6960f8cf8a0c986613985ccfa92938b2f709b0b827807a20d083cc9b85231",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed22/predictions.parquet",
+      "sha256": "3615d1c4794b61d16111cb16b4dc9d0afbfcc597efb0c6d8a7b01b0d0f7a34ed",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/F/seed33/predictions.parquet",
+      "sha256": "5e061ba1ab76c6a0aa156b697530605e4409489696d66baf0dde4e42110b7fdb",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_SHANDONG/seed11/predictions.parquet",
+      "sha256": "26fb0a391b6a42a83150400fa8528316626d81c0becde1b38bad316a8acd48b5",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_SHANDONG/seed22/predictions.parquet",
+      "sha256": "49f93d4d8ac91fba69ad64da5278b3da1f4e80912727990775ef2a3b2003aae9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_SHANDONG/seed33/predictions.parquet",
+      "sha256": "4d2fa32def755de8544dcf862722bbaf66309242d84daffe4ad2f8fcfe391b22",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_BTH/seed11/predictions.parquet",
+      "sha256": "da05c3cedb7cb5cf6bd06dde0bf40f1a74820b02351a5c5de5792423452e1695",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_BTH/seed22/predictions.parquet",
+      "sha256": "4b0fc41e7dc417842c93451c556af4b4b98e4b23de8a1f48677116b98918cb6c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_BTH/seed33/predictions.parquet",
+      "sha256": "9433827a487c3b83100b4066bcdef5a39e500f3eaa70e058dd6ce36ef1d8315c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_LIAONING/seed11/predictions.parquet",
+      "sha256": "6fe3f7f673633e02d5ce1073fa13c33e0142d4be7acfed63f43080a1f44cd0b3",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_LIAONING/seed22/predictions.parquet",
+      "sha256": "faa052bddf32d03bfd93bc6d65836ab9ae000bbee18712017bb2751038dcb54f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_LIAONING/seed33/predictions.parquet",
+      "sha256": "4495e1b20bd7ddb9b13127b97e4d88b4fb3a8634758c7c7c04fb03b6e0070ca6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_JILIN/seed11/predictions.parquet",
+      "sha256": "36eae2a8680615e2813ed2724b5b548f63407f6cf07f13eddcc0efc596edb8d5",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_JILIN/seed22/predictions.parquet",
+      "sha256": "3e00a8dfb58176ff078393e53c5507508ff6f2992c9cd5a37af7296408f2db9f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_JILIN/seed33/predictions.parquet",
+      "sha256": "8a02483b339bd3e7737a0504fb22b620192a5d47213f0d642fae095de7d77ff4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "sha256": "f126026126f8f3cc5c1191140afca6f313872e706a9279436c67457ff1d8e44c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_HEILONGJIANG/seed22/predictions.parquet",
+      "sha256": "20966f0e0094f92532952ce5b0aa53cd5b1dc315d43ac89c90ab667d67c5ac78",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_HEILONGJIANG/seed33/predictions.parquet",
+      "sha256": "b9839e46965782085c4807dcf4c6bd765d12baa3471b93b67bb9ca8802906ea9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "sha256": "fe09187ee6e2e581e2ab4a3c2e2f660273b997bb8ff9e1fe52eefacd9c2eba7b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_INNER_MONGOLIA/seed22/predictions.parquet",
+      "sha256": "d8f3d5e2636b7dba2ead28aa25ee4f1586ad4aa169a7995962865e44dbd0421f",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_CN_INNER_MONGOLIA/seed33/predictions.parquet",
+      "sha256": "93548ba56a2f3eb145b82e4038411439bc39ef1020d8fff9df04a86116de3962",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_JP/seed11/predictions.parquet",
+      "sha256": "74dfd41dca6b1c19482a08bc2e29ad2d441b27f8abf856c2f909618c4682819c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_JP/seed22/predictions.parquet",
+      "sha256": "6cb48ade2348b1b8efc62ad621b778bf86fbb4a2eeaeccef469df56f6f00acf5",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_JP/seed33/predictions.parquet",
+      "sha256": "86e41f25dc279fe12b2a7eedefa3f55c1014f948eeb9d8c4016ce1b59366f00c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_MN/seed11/predictions.parquet",
+      "sha256": "e48cb848ca98f8d19f2f6a42e003c7bfad7ea886c5a0ab158a93cbb2b74fa18a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_MN/seed22/predictions.parquet",
+      "sha256": "a2ccff066b5f6249b830b0dc28d2975dbf813b625417336aed62918b8c234792",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/ADD_MN/seed33/predictions.parquet",
+      "sha256": "3f5e396b5538e14fe09580824ea400a297b89659697c97a78c662ea362e04211",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_BTH/seed11/predictions.parquet",
+      "sha256": "5aa20a36af6a3c03c5b560a52981e6ce87ae115e09b1f450b5a0ab4e0b160074",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_BTH/seed22/predictions.parquet",
+      "sha256": "43a5eef902f4239cd8d4f3266a0a026a657d6a80940afd28d756d24c95cbcd95",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_BTH/seed33/predictions.parquet",
+      "sha256": "e24f664ab31ddf7f5b5edc02b7ebae8d24c5a3e34a0828cbf608023770718b34",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "sha256": "6e21e21bb7e61104b16172f9607a36ac2025f7c3dfe51a63035a6cef05a30b29",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_HEILONGJIANG/seed22/predictions.parquet",
+      "sha256": "537887b2ef87102fa4cce2122463a5f2cb568d84ea85fb921912a037df9b29d0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_HEILONGJIANG/seed33/predictions.parquet",
+      "sha256": "b817c402174dcc9b58c2787b27324328cf5bdc7e77139d9c79e9236ab6886d76",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "sha256": "f5cb8ec748fa6cc1310f520d33862e43960bc03a26e6ddb4182d3123541b08a8",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_INNER_MONGOLIA/seed22/predictions.parquet",
+      "sha256": "872195a99bd567dc58a468ebc7ee096e0202be5bacbbbf9b54b784db453426f0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_INNER_MONGOLIA/seed33/predictions.parquet",
+      "sha256": "281425fcfd8fa4a91b3816fb385ae1fd77654d91bbc70aa3400587a2cc516ff6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_JILIN/seed11/predictions.parquet",
+      "sha256": "af883b0eab63ac195a6858f9b2f09980fabe590502ec2f83445a17ffeea18e61",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_JILIN/seed22/predictions.parquet",
+      "sha256": "210f35893d4d9690ae1a5a7b29a91a801946b7c87d4fb543c801f8b1befa638b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_JILIN/seed33/predictions.parquet",
+      "sha256": "103db830bff72477de2405aa5ae50081013f973b68297b2a529204ea8dc467f9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_LIAONING/seed11/predictions.parquet",
+      "sha256": "810b15c7dc4752b5ef9554f182fb4260007cac5173f211d244a42127d9971a1b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_LIAONING/seed22/predictions.parquet",
+      "sha256": "1e53fb9a962d486fe2aa5df9bfea89d99f9b8775c298aeadb21d8d6394b653b7",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_LIAONING/seed33/predictions.parquet",
+      "sha256": "8e8f4020b6c79367d5b04d1927506b1d78c4a585582179701f5bce99c6e7fa00",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_SHANDONG/seed11/predictions.parquet",
+      "sha256": "37cd604ccf50f68664cc1e00ca00723ac67800b0cd50199bc160b37b6dce5db2",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_SHANDONG/seed22/predictions.parquet",
+      "sha256": "5c206024a2cb1386a456fd905fac94518639a6367278fabc4dbe01d105a843cf",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_CN_SHANDONG/seed33/predictions.parquet",
+      "sha256": "f7d1d6d32b93b857f31f25e00ace8cbc4f9843dbc972f826d6e92f651567ac04",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_JP/seed11/predictions.parquet",
+      "sha256": "2bc9bf9e495ee6b9a17082b1646ffe47082bb85bea61df02d0021f58a4b83668",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_JP/seed22/predictions.parquet",
+      "sha256": "036da32ad24a1e4df7dadfcf802395476facd60df2aab38a3c25ba69fcd9ebcb",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_JP/seed33/predictions.parquet",
+      "sha256": "271a59eaace96b55a8afb52da8e79c1f276750bd506d6e0fb5a89bdce67078a8",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_CAPITAL/seed11/predictions.parquet",
+      "sha256": "51ae602613720ad734e8924f8042022384d9bcf6b47df142213aaef138c5efa8",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_CAPITAL/seed22/predictions.parquet",
+      "sha256": "b5cecf6166d204f2b902f247593fe12ef4dc0ca1760c4b58824d9ca3890fc78a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_CAPITAL/seed33/predictions.parquet",
+      "sha256": "569ca2d8d97266bc09c72217174d6f8bf3948d1368712f25376def77536cf2b0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_CHUNGCHEONG/seed11/predictions.parquet",
+      "sha256": "2e3302a3b2ca77131158b789fc7c613cc6e7ba16775f52c033e9d1e9bf36d3e2",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_CHUNGCHEONG/seed22/predictions.parquet",
+      "sha256": "66555b0a8f09d7a45eff62b3137b85bf5cb9712b72c917650fb6bd7ada0214e6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_CHUNGCHEONG/seed33/predictions.parquet",
+      "sha256": "e49ee529a40e6c38b27e52b33088e57cb71af6025939c7fcf226f32315832c9c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_DAEGYEONG/seed11/predictions.parquet",
+      "sha256": "f46a0ca7c6c365340e38821a0870fb88e7135fa83742797fc0fedf131dfae730",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_DAEGYEONG/seed22/predictions.parquet",
+      "sha256": "d092cb82b1a8caa93c50d853c4d2751a14d179793eed4ba5ef1375f79db87709",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_DAEGYEONG/seed33/predictions.parquet",
+      "sha256": "98e676f879f8efd0266b003f81a339e8bd39f18f16d05fa6ea872879cd16bfae",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_DONGNAM/seed11/predictions.parquet",
+      "sha256": "7ba460b6c0bab59881b72d260993b2151d01b4fee2564141324c55a46ce532d2",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_DONGNAM/seed22/predictions.parquet",
+      "sha256": "a60196ae90abb45fd33e61addfe5a794aec2692be2d2be2c8f3a38953424a2a2",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_DONGNAM/seed33/predictions.parquet",
+      "sha256": "4ad28df4cb0c22149da7a184c48c0af556b1d9a13632f9da70ac9be8d43d7d29",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_GANGWON/seed11/predictions.parquet",
+      "sha256": "19bb87b09a2ece1da3774c55d0e831e92eea796642dfaa572b1248ab4f1ca4f4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_GANGWON/seed22/predictions.parquet",
+      "sha256": "e05db2703c174360ad44cba94bd5633366938c4a299fb8581c8488e80ae4a3cf",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_GANGWON/seed33/predictions.parquet",
+      "sha256": "d3f6f8b55d3e7206e1be83026d1b553a64bd76bdebfc553d1f52f972e2d21cb0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_HONAM/seed11/predictions.parquet",
+      "sha256": "ca2eb56527b32818d92cc94b73e7695812a07d8ac6a38793916674bc7f0bd8c6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_HONAM/seed22/predictions.parquet",
+      "sha256": "a7c68fd5a6ab0d169ab0b018dac771085b699fd67b11e9b848364c4144861062",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_HONAM/seed33/predictions.parquet",
+      "sha256": "302ac55254cd9262176b7f8f4badfd29f1693bf5fc170e8f94993025958e61f1",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_JEJU/seed11/predictions.parquet",
+      "sha256": "185a5f5a1252929b3f5fe2d670ecf244645863b4d239d34d3dd110829b5a6369",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_JEJU/seed22/predictions.parquet",
+      "sha256": "338e54a5ef7f1f7d73ebee6ebd31d22d119ced0cbabeb10a684825d1beb90c18",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_KR_JEJU/seed33/predictions.parquet",
+      "sha256": "a02e764ce9d53e4ee123d29ed7ec09919d917a935308960e8ef13e60ff19530c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_MN/seed11/predictions.parquet",
+      "sha256": "c6dc558a34eecf581fc76f46c5b203b874a12c295fd1310d705674de6463bb39",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_MN/seed22/predictions.parquet",
+      "sha256": "a720619b68c6886f2a121a7a6ae4e4d69893af8665dacd1bbaf416edea8eaed6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/C/runs/C_GRU/DROP_MN/seed33/predictions.parquet",
+      "sha256": "5ea0c444fe9709557a5fcaf103c94c611e0f808d5164bb1f99d6f8ffa44a8897",
+      "sidecar": null
+    }
+  ]
+}
