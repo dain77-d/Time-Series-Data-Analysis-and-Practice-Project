@@ -107,7 +107,19 @@ def grid_origins(root, d):
 
 
 def job(args):
+    """one fit; cached under results/A/cache so a crash after fitting never costs the fits again."""
+    import pickle
     root, name, cols, order = args
+    cache = OUT / "cache" / (name + "".join(f"_{r}{L}" for r, L in cols[:1]) + f"_{len(cols)}.pkl")
+    if cache.exists():
+        return pickle.loads(cache.read_bytes())
+    out = _job(root, name, cols, order)
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_bytes(pickle.dumps(out))
+    return out
+
+
+def _job(root, name, cols, order):
     d = prepare(root)
     res, full, X = fit(d, cols, order)
     og = grid_origins(root, d)
@@ -228,7 +240,7 @@ def main(root, jobs):
     for r in d["reg"]:
         per_h = {}
         for h in H:
-            cand = {L: v[0] for (n, c), v in res.items() if n == f"REG_{r}" and c[0][1] in (h, h + 3, h + 6, h + 12)}
+            cand = {c[0][1]: v[0] for (n, c), v in res.items() if n == f"REG_{r}" and c[0][1] in (h, h + 3, h + 6, h + 12)}
             sc = {L: val_rmse(root, p, h) for L, p in cand.items()}
             L = min(sc, key=sc.get)
             per_h[h] = cand[L]
@@ -272,7 +284,7 @@ def figures():
 def score(root, split, final):
     fs = sorted((OUT / "runs").glob("A_SARIMAX/*/seed0/predictions.parquet"))
     conds = [f.parts[-3] for f in fs]
-    pairs = [f"A_SARIMAX|{c}|ensemble:A_SARIMAX|BASE|ensemble" for c in conds if c != "BASE"]
+    pairs = [f"A_SARIMAX|{c}|seed|seed=0:A_SARIMAX|BASE|seed|seed=0" for c in conds if c != "BASE"]   # one deterministic fit = seed 0
     d = OUT / "scores" / split
     cmd = [sys.executable, str(root / "Model" / "Common" / "score.py"), "--predictions", *map(str, fs), "--split", split,
            "--output-dir", str(d), "--pairs", *pairs] + (["--final"] if final else [])

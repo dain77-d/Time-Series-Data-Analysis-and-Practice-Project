@@ -1,0 +1,135 @@
+{
+  "protocol_version": "fixed-calendar-seed-v1.0.0",
+  "split": "validation",
+  "fixed_eligible_by_horizon": {
+    "3": 2531,
+    "6": 2530,
+    "12": 2528,
+    "24": 2524
+  },
+  "fixed_calendar_slots_by_horizon": {
+    "3": 2920,
+    "6": 2920,
+    "12": 2920,
+    "24": 2920
+  },
+  "rows_selected_using_predictions": false,
+  "model_prediction_intersection_used": false,
+  "negative_prediction_rule": "clip each scored forecast at zero; count per run and horizon",
+  "seed_score_summary_is_not_prediction_ensemble": true,
+  "ensemble_rule": "raw-unit arithmetic mean, then nonnegative clip",
+  "hac_default": "max(horizon/3-1,0), Bartlett, exact elapsed-time slots, gaps retained",
+  "hac_lag_override": null,
+  "bootstrap": "moving 7-day=56 calendar-slot blocks; gaps remain inside blocks",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 0,
+  "holm_family": "all finite p-values in this declared scoring invocation (all included horizons/runs/pairs)",
+  "test_guard": false,
+  "does_not_train_models": true,
+  "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
+  "written_kst": "2026-11-09T16:28:59.408831+09:00",
+  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
+  "prediction_sources": [
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/ALL/seed0/predictions.parquet",
+      "sha256": "a10466082c345207b13927d3193d4fffee7aeeb313e23057d00b12ba9641d0a2",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/BASE/seed0/predictions.parquet",
+      "sha256": "067c99b6ec2bc374934ea37ad9bf5b859ed61f0d1597c8a931ee0ac7b1634120",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_BTH/seed0/predictions.parquet",
+      "sha256": "f1a5a4e57dc762841d3ad3a4538a4a4b308817607b703334621cccac9ec59e20",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_EAST/seed0/predictions.parquet",
+      "sha256": "a87eb258a7b031f2c79eb72729650b0b336dbaccb70d15cb9832bf74e595f389",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_HEILONGJIANG/seed0/predictions.parquet",
+      "sha256": "8f17dcb075fcc50ca72d785eb4012236e83852bcccfb02aaa64279eb7a949081",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_INNER_MONGOLIA/seed0/predictions.parquet",
+      "sha256": "efbf40d4c629cc4816634924e6417e41b92270ed9a4cea239365825ede75fe9c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_JILIN/seed0/predictions.parquet",
+      "sha256": "3530c528107d266fdcb2fb9714a55282cd0b57e85fc56585a095fb3187a7b12d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_LIAONING/seed0/predictions.parquet",
+      "sha256": "646aa607dc979fb2a48b979473eda312108ccbc56dbf8edc634458973d67693e",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_CN_SHANDONG/seed0/predictions.parquet",
+      "sha256": "aa83643384197b6f1a9b70f8017fc90c92ae08037e393d12db8cb41a49015d44",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_JP/seed0/predictions.parquet",
+      "sha256": "abb92965b3efc4a08396ee520de124e07f13c8ecfff7ffa383d450e16647fc66",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_JP_EAST/seed0/predictions.parquet",
+      "sha256": "49c4f778550fa6aad980277c23a26f1e3770d34b2d054e0540a04895b29e13c7",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_JP_WEST25/seed0/predictions.parquet",
+      "sha256": "0663d117fd484561795643bc815d8105e0a04efec2ff3e406437defd68cb190e",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_CAPITAL/seed0/predictions.parquet",
+      "sha256": "a14cb7bf89d46e6befa11e74256a3dcc73116be984a481ea400d5f97143e9ce4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_CHUNGCHEONG/seed0/predictions.parquet",
+      "sha256": "5d873c884177b32dc23c42d9a350b9baefbeb515cd99a43acc04fa1522a788ff",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_DAEGYEONG/seed0/predictions.parquet",
+      "sha256": "a2de27cc445b8c1a93acb4ddb6a4090e85c5485cfaaeec585bc498b9bd4165b9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_DONGNAM/seed0/predictions.parquet",
+      "sha256": "cc744c276bd5674b70accdbae9da2bebbba1e907a466f923ad02d05e15770652",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_GANGWON/seed0/predictions.parquet",
+      "sha256": "d9d8385f71537785e04997fe53d829a01dff3169d8ed594380601a275c61fd9b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_HONAM/seed0/predictions.parquet",
+      "sha256": "ce871554a5eac4249203f7b8b0e9dca69bbc6bf01f75af67dbaa16d3e7e44d68",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_KR_JEJU/seed0/predictions.parquet",
+      "sha256": "f722b2d665b7a3a3d2711b104d9cc923776e89c64f5f12e986eb3be8d62bb461",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/A/runs/A_SARIMAX/REG_MN/seed0/predictions.parquet",
+      "sha256": "fb841057316c929154a74818beeda9802f2d67a597a71e1d97d690643d44fc74",
+      "sidecar": null
+    }
+  ]
+}
