@@ -271,12 +271,12 @@ def figures():
     lc = pd.read_csv(OUT / "lag_choice.csv")
     imp = lc.assign(v=100 * (lc.val_rmse_base - lc.val_rmse) / lc.val_rmse_base).pivot(index="region", columns="horizon", values="v")
     heat(imp.sort_values(6, ascending=False).rename(columns=lambda h: f"{h} h"),
-         "A SARIMAX: RMSE improvement over BASE, % (2023; lag chosen on 2023)", OUT / "a_region_improvement.png", fmt="{:.1f}", cmap="RdBu")
+         "A: RMSE gain vs BASE, %\n(2023, lag picked on 2023)", OUT / "a_region_improvement.png", fmt="{:.1f}", cmap="Reds")
     lag = lc.pivot(index="region", columns="horizon", values="lag").loc[imp.sort_values(6, ascending=False).index]
     lag.to_csv(OUT / "a_lag_table.csv")
     g = pd.read_csv(OUT / "granger.csv")
     p = g.assign(v=-np.log10(g.p_holm.clip(lower=1e-300))).pivot(index="region", columns="subset", values="v")
-    heat(p.loc[p["all"].sort_values(ascending=False).index], "Granger region -> Seoul, -log10 Holm p (2021-22)",
+    heat(p.loc[p["all"].sort_values(ascending=False).index], "Granger region -> Seoul\n-log10 Holm p (2021-22)",
          OUT / "a_granger.png", fmt="{:.0f}", cmap="viridis")
     print("figures ->", OUT)
 
