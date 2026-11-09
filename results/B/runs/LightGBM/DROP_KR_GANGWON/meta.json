@@ -1,0 +1,107 @@
+{
+ "condition": "DROP_KR_GANGWON",
+ "horizons": {
+  "3": {
+   "grid_val_rmse": [
+    5.782413993645646,
+    5.758877678376416,
+    5.741518147072191,
+    5.780039266310741
+   ],
+   "chosen": {
+    "num_leaves": 31,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9190,
+   "best_iterations": {
+    "11": 496,
+    "22": 450,
+    "33": 972
+   }
+  },
+  "6": {
+   "grid_val_rmse": [
+    8.08855230240141,
+    8.125143845335312,
+    8.138286690574922,
+    8.160131314847037
+   ],
+   "chosen": {
+    "num_leaves": 15,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9190,
+   "best_iterations": {
+    "11": 573,
+    "22": 706,
+    "33": 917
+   }
+  },
+  "12": {
+   "grid_val_rmse": [
+    10.086729232923751,
+    10.128873577911849,
+    10.107167910067762,
+    10.206609886811705
+   ],
+   "chosen": {
+    "num_leaves": 15,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9190,
+   "best_iterations": {
+    "11": 662,
+    "22": 626,
+    "33": 366
+   }
+  },
+  "24": {
+   "grid_val_rmse": [
+    12.155068525242044,
+    12.166011094807875,
+    12.029855210158306,
+    12.079355509572917
+   ],
+   "chosen": {
+    "num_leaves": 31,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9190,
+   "best_iterations": {
+    "11": 200,
+    "22": 222,
+    "33": 164
+   }
+  }
+ },
+ "seconds": 2149.0,
+ "base_params": {
+  "objective": "regression",
+  "learning_rate": 0.03,
+  "min_data_in_leaf": 50,
+  "bagging_fraction": 0.8,
+  "bagging_freq": 1,
+  "lambda_l2": 1.0,
+  "verbose": -1,
+  "max_bin": 63
+ },
+ "grid": [
+  {
+   "num_leaves": 15,
+   "feature_fraction": 0.3
+  },
+  {
+   "num_leaves": 15,
+   "feature_fraction": 0.5
+  },
+  {
+   "num_leaves": 31,
+   "feature_fraction": 0.3
+  },
+  {
+   "num_leaves": 31,
+   "feature_fraction": 0.5
+  }
+ ],
+ "data_version": "B-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

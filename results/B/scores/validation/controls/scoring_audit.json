@@ -1,0 +1,95 @@
+{
+  "protocol_version": "fixed-calendar-seed-v1.0.0",
+  "split": "validation",
+  "fixed_eligible_by_horizon": {
+    "3": 2531,
+    "6": 2530,
+    "12": 2528,
+    "24": 2524
+  },
+  "fixed_calendar_slots_by_horizon": {
+    "3": 2920,
+    "6": 2920,
+    "12": 2920,
+    "24": 2920
+  },
+  "rows_selected_using_predictions": false,
+  "model_prediction_intersection_used": false,
+  "negative_prediction_rule": "clip each scored forecast at zero; count per run and horizon",
+  "seed_score_summary_is_not_prediction_ensemble": true,
+  "ensemble_rule": "raw-unit arithmetic mean, then nonnegative clip",
+  "hac_default": "max(horizon/3-1,0), Bartlett, exact elapsed-time slots, gaps retained",
+  "hac_lag_override": null,
+  "bootstrap": "moving 7-day=56 calendar-slot blocks; gaps remain inside blocks",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 0,
+  "holm_family": "all finite p-values in this declared scoring invocation (all included horizons/runs/pairs)",
+  "test_guard": false,
+  "does_not_train_models": true,
+  "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
+  "written_kst": "2026-11-09T15:50:40.076431+09:00",
+  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
+  "prediction_sources": [
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DN/seed11/predictions.parquet",
+      "sha256": "005769dfaa9d4089a32ac3bdc91732315ceb582ecfe69e8ae47835d388d52681",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DN/seed22/predictions.parquet",
+      "sha256": "8a43ca767a0a19f17cd8bcf43ac685bdcd2d98c21a9413dc6f5119657cdfa422",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DN/seed33/predictions.parquet",
+      "sha256": "42c8ab123e15f5246a94bae993e817b204db8b80d24588c26fd4020ffbba6e9d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_CN_EAST/seed11/predictions.parquet",
+      "sha256": "7f730856c53a680b35c44de716d52113dbf672b05694a84c991aac3a37932893",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_CN_EAST/seed22/predictions.parquet",
+      "sha256": "0944d84817fb7ce61d6453bd53814dcb13bd46035254680120f5b043999f7f75",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_CN_EAST/seed33/predictions.parquet",
+      "sha256": "c37885e3efc98d27989aa7f23a15f140726c1da81992368a2b3259b2c8d063a7",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_JP_EAST/seed11/predictions.parquet",
+      "sha256": "cf1ad8de7109ce197066d825abd8ee7443cf454e6158b3c9c2f3898289268676",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_JP_EAST/seed22/predictions.parquet",
+      "sha256": "5aec0f00ddd88cd6ae3699232c03f96b75fa142c3ed274f621c9c0d6701588e6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_JP_EAST/seed33/predictions.parquet",
+      "sha256": "0f46afbfa994e0520c84deed06af236b73213a9a55bb5452e415d47c3a02f6f0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_JP_WEST25/seed11/predictions.parquet",
+      "sha256": "4753bf1e79528025092f2c41c90ad012ff44b96087e31a291b191cb29dc2f2c2",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_JP_WEST25/seed22/predictions.parquet",
+      "sha256": "ab30b474c90e358af7f60a989b851b2001ed04c87216060cf76e4e7226177a2d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/CTRL_JP_WEST25/seed33/predictions.parquet",
+      "sha256": "4e39a14d1a6ab6f07c010e1fdb647addc77579ad9f5554edc9fee2c8eca45440",
+      "sidecar": null
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "protocol_version": "fixed-calendar-seed-v1.0.0",
+  "split": "validation",
+  "fixed_eligible_by_horizon": {
+    "3": 2531,
+    "6": 2530,
+    "12": 2528,
+    "24": 2524
+  },
+  "fixed_calendar_slots_by_horizon": {
+    "3": 2920,
+    "6": 2920,
+    "12": 2920,
+    "24": 2920
+  },
+  "rows_selected_using_predictions": false,
+  "model_prediction_intersection_used": false,
+  "negative_prediction_rule": "clip each scored forecast at zero; count per run and horizon",
+  "seed_score_summary_is_not_prediction_ensemble": true,
+  "ensemble_rule": "raw-unit arithmetic mean, then nonnegative clip",
+  "hac_default": "max(horizon/3-1,0), Bartlett, exact elapsed-time slots, gaps retained",
+  "hac_lag_override": null,
+  "bootstrap": "moving 7-day=56 calendar-slot blocks; gaps remain inside blocks",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 0,
+  "holm_family": "all finite p-values in this declared scoring invocation (all included horizons/runs/pairs)",
+  "test_guard": false,
+  "does_not_train_models": true,
+  "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
+  "written_kst": "2026-11-09T15:50:04.139952+09:00",
+  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
+  "prediction_sources": [
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DN/seed11/predictions.parquet",
+      "sha256": "005769dfaa9d4089a32ac3bdc91732315ceb582ecfe69e8ae47835d388d52681",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DN/seed22/predictions.parquet",
+      "sha256": "8a43ca767a0a19f17cd8bcf43ac685bdcd2d98c21a9413dc6f5119657cdfa422",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DN/seed33/predictions.parquet",
+      "sha256": "42c8ab123e15f5246a94bae993e817b204db8b80d24588c26fd4020ffbba6e9d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/F/seed11/predictions.parquet",
+      "sha256": "8843a6b4bc906101d605e3e38861e0e9157e528c88bfbad9e51f158615d39320",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/F/seed22/predictions.parquet",
+      "sha256": "b2ffa560548c7030878d6228b8bcad7ab63f30e02ddcc267537fc0fe7c18a24b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/F/seed33/predictions.parquet",
+      "sha256": "67d04da2ba852a88b714b4a940fa1c85b53fbb04c582d4802c789542eacaecc0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_SHANDONG/seed11/predictions.parquet",
+      "sha256": "c7eb063f013e83cbf92db7a2e00ded79e4ce3b28e9087d9c3475472531c0f110",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_SHANDONG/seed22/predictions.parquet",
+      "sha256": "800f0110a94d6d3889481ab85a478fc1d6faeca07a8d5024ed8e7f8d10952e73",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_SHANDONG/seed33/predictions.parquet",
+      "sha256": "783fce33a3b4299ae3885d4f1f3cf12c1af9270c35f8313528c022e35f80fdf0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_BTH/seed11/predictions.parquet",
+      "sha256": "969de4b228d573b7d9e296c2a60ef93225eb8def763ac97e79225d3d042c6562",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_BTH/seed22/predictions.parquet",
+      "sha256": "1296c301e1454748893d7314422b8365520601faf67621e1a08b60079893b72b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_BTH/seed33/predictions.parquet",
+      "sha256": "3ed2a70f6fe2d6388d88694d6617dcd20c2b22b1c4d5c9fe4088751569a6cecb",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_LIAONING/seed11/predictions.parquet",
+      "sha256": "f5e4b4f47287742f97d5c991757a1e0b0cb24abb813bbee298f43eddfd64b9b3",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_LIAONING/seed22/predictions.parquet",
+      "sha256": "195c4efdee6d7cc26b849f95db2cf773b0cc2b62c704b61daf991bede9c862ce",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_LIAONING/seed33/predictions.parquet",
+      "sha256": "149898624b42f1c582229b3a379957feb03dcfd4e22434e2c5dce81aae8fdb5d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_JILIN/seed11/predictions.parquet",
+      "sha256": "a41857efed2b786cefd6584059297cb4c3285a9df0b5c275409ff3fad7c18862",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_JILIN/seed22/predictions.parquet",
+      "sha256": "9998fc019a9a8262079f234b92329e2c3fc908fd5258f382ab1dc1efda900656",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_JILIN/seed33/predictions.parquet",
+      "sha256": "f691790c0021a875fd654dd44f649f22c7637c4b42e4f4e7566563034585d3d4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "sha256": "cdcf0410807f16fb0baaf25b6ea9fc5d96efa3fcbf92cf7a0b33796406c56380",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_HEILONGJIANG/seed22/predictions.parquet",
+      "sha256": "1a76ebe754bc5aa495ea424b7ce6c884bd99c220f68e1ef7d7cc69ffc8fe7f6d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_HEILONGJIANG/seed33/predictions.parquet",
+      "sha256": "986b340c5f0cd34def48fac30cadad2f6731b3c776b183bbfdbbf7db79050820",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "sha256": "c48576ededf06ddb4979523bb046c66ea2a58599c39b01070da225b6b67233f9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_INNER_MONGOLIA/seed22/predictions.parquet",
+      "sha256": "9e72669c35ef136fbe45ecf58d90e20f3b538f4e2256fb4c2e0ad6fd1be4f291",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_CN_INNER_MONGOLIA/seed33/predictions.parquet",
+      "sha256": "f301276a5e70ae6a7ab2ad10e298b2df02e19001326e0a3c95a9cbf9c64f0b44",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_JP/seed11/predictions.parquet",
+      "sha256": "4138a2fb12c9ec54fd44e576af4144131d6361ee21d1bd06814dc1c9385f07bc",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_JP/seed22/predictions.parquet",
+      "sha256": "acbe0ed54e0ad1521f35b8fd76e775ae58846ffa742eb8d461b7d09b60e5f390",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_JP/seed33/predictions.parquet",
+      "sha256": "ed9b360a4448c7eb45acab1bd0330474ba5d22a9d4e93075366995bf82d3eda0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_MN/seed11/predictions.parquet",
+      "sha256": "ac89e998d39bc2bd591bd430a0f12a338bcd1a7f6c6da52435b28f34cab3e33d",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_MN/seed22/predictions.parquet",
+      "sha256": "ad2bdb3e3406196e7646d62eae15c06dcbb57ff00003efb11104b906398f1745",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/ADD_MN/seed33/predictions.parquet",
+      "sha256": "68fd4aedbd71d1d77c41ef958401d21e51645bc5f93ced5e082678ab4dcf91df",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_BTH/seed11/predictions.parquet",
+      "sha256": "7c7b175e435be1569f582a3ec72a780ade417c6af0a32c22df4ea3188c1da707",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_BTH/seed22/predictions.parquet",
+      "sha256": "48a5deca858b6eae5d2efed4dc515d5c1fea05e1a3e80210d3ac178be36a9b09",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_BTH/seed33/predictions.parquet",
+      "sha256": "0e6d97d50cb1bfe4e10c7710d77dd23be3eb5d18a56b2e593a3201373f599c8a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "sha256": "bdc4027c716e9a48747e132602cb8fbcbf6c63f214b32e099f0c39ab9f59a63a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_HEILONGJIANG/seed22/predictions.parquet",
+      "sha256": "db727ab77da61d16e4f51d6da2d28575532fa3d010fe424b8800822ec5866f52",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_HEILONGJIANG/seed33/predictions.parquet",
+      "sha256": "a037a5963a6339c8229a32628fc9550c2df308b8b529f355f9274a4ae4381014",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "sha256": "00270c1900f9e930da6151ed3f8010f206d543d9ed602faa0245850955501839",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_INNER_MONGOLIA/seed22/predictions.parquet",
+      "sha256": "29e5630a56b3c972031081e544e60e1f8bf98498efd50ecd69fc1ec1a8efb1db",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_INNER_MONGOLIA/seed33/predictions.parquet",
+      "sha256": "65afd75a50d4df75852f63c3253f50ef3a4f3319579915d202362354ac0a770e",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_JILIN/seed11/predictions.parquet",
+      "sha256": "018c418f826f1d87c493d00bd5f63ee0a78ea439aa98b0d28993f51ebc3c8060",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_JILIN/seed22/predictions.parquet",
+      "sha256": "37c0658cb53788de1bb03525181c1f6fb813cc6485ccd3313c1318b1a9b8cc28",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_JILIN/seed33/predictions.parquet",
+      "sha256": "89a8746b377bc92ec93e9d142cb28901569fd8b95edd39ffdf2035ce978c4702",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_LIAONING/seed11/predictions.parquet",
+      "sha256": "aebf774ecd67fbc4571846d72e76662ae019a6cccb8f3cb28fe429840f4e7a05",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_LIAONING/seed22/predictions.parquet",
+      "sha256": "aa84a01775c4cc3ab309fe316c3f7e41ecb69e7add4ca09f62f9fb37631dc97a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_LIAONING/seed33/predictions.parquet",
+      "sha256": "3a13c7f392ee077837a546955ee9b58a124d73bb69d5316928cdef438c5cd431",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_SHANDONG/seed11/predictions.parquet",
+      "sha256": "ec92b331b311cbe6ccbf5dbd56fa658604b08f8f16e54c6b481b4d0228f7c9b0",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_SHANDONG/seed22/predictions.parquet",
+      "sha256": "71fdd3b3e1ae2a5452848134ea94cc7971487ccbff594ef091c387436fc4a20c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_CN_SHANDONG/seed33/predictions.parquet",
+      "sha256": "e2aa7aae190647aad62622ce97bb46ceedd5793e5be04ab3094f5aef9841168b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_JP/seed11/predictions.parquet",
+      "sha256": "45e54401605dc69b1fec47723c7ad7acfb42d763f87f2422303486385c5b787e",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_JP/seed22/predictions.parquet",
+      "sha256": "1d6cd0814c3aed1d70874432d2ffb416975fa952a4c99f8fd7ca7faa819cbc7a",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_JP/seed33/predictions.parquet",
+      "sha256": "9639ec48c645b730c4e8d20fe494738623a644bc49688311a3503439e3086350",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_CAPITAL/seed11/predictions.parquet",
+      "sha256": "55d54893c5daa43da5000569b6c2fe63f7270852e82df83e8aed64a873e03415",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_CAPITAL/seed22/predictions.parquet",
+      "sha256": "59fa04c79338b46fcea844b7dcdf734259e7afd42c54e1915b20d4489022bb91",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_CAPITAL/seed33/predictions.parquet",
+      "sha256": "c1baa80993f43b47869018b396b332eccf85df4e2200404ff1872ea9672fc064",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_CHUNGCHEONG/seed11/predictions.parquet",
+      "sha256": "08baabd0ea1cbb7c422e010cbebce6ecbb67767ec2110d66d1edad5ea0650a53",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_CHUNGCHEONG/seed22/predictions.parquet",
+      "sha256": "107373b54edf8ca80c9695874dad640bebfe17e44e3f649a1ba0e61b0ea4eb87",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_CHUNGCHEONG/seed33/predictions.parquet",
+      "sha256": "177bfb8fff21a46d5d4b106601a41fdf27d072bea005863cf643467ec9f804ca",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_DAEGYEONG/seed11/predictions.parquet",
+      "sha256": "465a5c71a915a45c5a09c406ee559dc08ce06d6aeaf5b70a09f856c23a22f2e4",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_DAEGYEONG/seed22/predictions.parquet",
+      "sha256": "8090f5e51ab1d7b832f707fcf0c261c06c363b70dcbae06bc2be44b63fc64ace",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_DAEGYEONG/seed33/predictions.parquet",
+      "sha256": "2f96c995892748cda0152b45c28a20af3a97e3e74d0aab148be7dd7a86a4cddd",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_DONGNAM/seed11/predictions.parquet",
+      "sha256": "fae47a3bb2c64b0ae8b9408397140cd459904a751a584219fa30457c127a2450",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_DONGNAM/seed22/predictions.parquet",
+      "sha256": "0ad839ae2f31dbb67c2e7a6b90ec9d25fd0079af00c6e4d71b8a6c7bdbcab4a9",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_DONGNAM/seed33/predictions.parquet",
+      "sha256": "102f9f39c64708bd028315848ee314d55cb5fb69c21a5e31cb1750d2c436b4d7",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_GANGWON/seed11/predictions.parquet",
+      "sha256": "92825d111e5323813ffa53ab47ee6ca42bb4696f0cd7f9452bf6f35d5616fae5",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_GANGWON/seed22/predictions.parquet",
+      "sha256": "6cdcf6356c528acc1ba78764f6fa0bb245ba6d772cbbad592efa59930bd445a6",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_GANGWON/seed33/predictions.parquet",
+      "sha256": "250d4727e16b1a4a66a6af0d2aff9cbb75167536920c39077e7c44319b61caff",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_HONAM/seed11/predictions.parquet",
+      "sha256": "8ad639e1306d8a8748b68b7a276182a3db94d7a2a84f434efd0f81dce19ca695",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_HONAM/seed22/predictions.parquet",
+      "sha256": "ea8c78cbb068df3bf3c036a8bec110e4cc9189fea3b388e9bd4d7eedfa28f4b3",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_HONAM/seed33/predictions.parquet",
+      "sha256": "13daf69484ea2cd6f23a0dbdc4e890fbcf4f05d948dbff3767e498df5ef8931c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_JEJU/seed11/predictions.parquet",
+      "sha256": "728bbb33a76d2ae9410fed7d00c4df15deea6ae80b4c81b0b77b8804e8e22a4c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_JEJU/seed22/predictions.parquet",
+      "sha256": "07a4d2569d38710c958ae69393a0cd655a21b6f8e0ec5c2b35cd0ae63ed1490b",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_KR_JEJU/seed33/predictions.parquet",
+      "sha256": "ab5950cb539259dee1f30017e473422b291850489d281ab4b5d2db5d79bbf7f5",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_MN/seed11/predictions.parquet",
+      "sha256": "bbbcb62e7a11384d7a4d0101f1675eb735758fd2cfaee586d5ae365ce0426067",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_MN/seed22/predictions.parquet",
+      "sha256": "f59a48c7fd8db3daa40f6a30ff889ec9538c7afabde80a0009afa8e3594fbd2c",
+      "sidecar": null
+    },
+    {
+      "path": "/workspace/tsda/repo/results/B/runs/LightGBM/DROP_MN/seed33/predictions.parquet",
+      "sha256": "1034291cd4dd3a0762fe036776983e47e52bd69c56f74a12b345075864a858ee",
+      "sidecar": null
+    }
+  ]
+}

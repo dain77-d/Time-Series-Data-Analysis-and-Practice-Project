@@ -1,0 +1,107 @@
+{
+ "condition": "F",
+ "horizons": {
+  "3": {
+   "grid_val_rmse": [
+    5.729126810588933,
+    5.838685079315842,
+    5.817534874539677,
+    5.796943007891615
+   ],
+   "chosen": {
+    "num_leaves": 15,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9670,
+   "best_iterations": {
+    "11": 706,
+    "22": 561,
+    "33": 1427
+   }
+  },
+  "6": {
+   "grid_val_rmse": [
+    8.097497748417323,
+    8.069745797805128,
+    8.081687280064408,
+    7.995918128776283
+   ],
+   "chosen": {
+    "num_leaves": 31,
+    "feature_fraction": 0.5
+   },
+   "n_features": 9670,
+   "best_iterations": {
+    "11": 535,
+    "22": 514,
+    "33": 581
+   }
+  },
+  "12": {
+   "grid_val_rmse": [
+    10.169902884815796,
+    10.190371307206638,
+    10.292557181453079,
+    10.249344718185002
+   ],
+   "chosen": {
+    "num_leaves": 15,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9670,
+   "best_iterations": {
+    "11": 642,
+    "22": 372,
+    "33": 798
+   }
+  },
+  "24": {
+   "grid_val_rmse": [
+    12.067202847215212,
+    12.101691289976797,
+    11.9579107693627,
+    12.246528919010549
+   ],
+   "chosen": {
+    "num_leaves": 31,
+    "feature_fraction": 0.3
+   },
+   "n_features": 9670,
+   "best_iterations": {
+    "11": 172,
+    "22": 238,
+    "33": 259
+   }
+  }
+ },
+ "seconds": 2841.1,
+ "base_params": {
+  "objective": "regression",
+  "learning_rate": 0.03,
+  "min_data_in_leaf": 50,
+  "bagging_fraction": 0.8,
+  "bagging_freq": 1,
+  "lambda_l2": 1.0,
+  "verbose": -1,
+  "max_bin": 63
+ },
+ "grid": [
+  {
+   "num_leaves": 15,
+   "feature_fraction": 0.3
+  },
+  {
+   "num_leaves": 15,
+   "feature_fraction": 0.5
+  },
+  {
+   "num_leaves": 31,
+   "feature_fraction": 0.3
+  },
+  {
+   "num_leaves": 31,
+   "feature_fraction": 0.5
+  }
+ ],
+ "data_version": "B-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

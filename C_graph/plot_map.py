@@ -43,7 +43,7 @@ def land(ax):
 
 # Korean regions sit close together: their labels go out to the sea with a leader line (lon, lat of the label)
 LABEL_AT = {"KR_CAPITAL": (123.3, 39.0), "KR_CHUNGCHEONG": (123.9, 35.9), "KR_HONAM": (123.6, 33.6), "KR_JEJU": (125.9, 31.4),
-            "KR_GANGWON": (133.5, 40.0), "KR_DAEGYEONG": (134.0, 37.4), "KR_DONGNAM": (134.0, 35.0)}
+            "KR_GANGWON": (133.5, 40.0), "CN_SHANDONG": (117.6, 34.6), "KR_DAEGYEONG": (134.0, 37.4), "KR_DONGNAM": (134.0, 35.0)}
 SHORT = {"KR_CAPITAL": "Capital", "KR_GANGWON": "Gangwon", "KR_CHUNGCHEONG": "Chungcheong", "KR_HONAM": "Honam",
          "KR_DAEGYEONG": "Daegu-Gyeongbuk", "KR_DONGNAM": "Busan-Ulsan-Gyeongnam", "KR_JEJU": "Jeju", "CN_SHANDONG": "Shandong",
          "CN_BTH": "Beijing-Tianjin-Hebei", "CN_LIAONING": "Liaoning", "CN_JILIN": "Jilin", "CN_HEILONGJIANG": "Heilongjiang",
@@ -64,7 +64,7 @@ def panel(ax, centres, stations, values, sig, title, vmax, fmt="{:+.1f}"):
         ax.scatter(x, y, s=size, c="#c0392b" if v > 0 else "#2e86c1", alpha=0.5,
                    ec="k" if sig.get(r) else "none", lw=2.2 if sig.get(r) else 0, zorder=3)
         tx, ty = LABEL_AT.get(r, (x, y - 1.1))
-        if kr:
+        if r in LABEL_AT:
             ax.plot([x, tx], [y, ty], c="#555", lw=0.6, zorder=2)
         ax.text(tx, ty, f"{SHORT[r]}\n{fmt.format(v)}", ha="center", va="center", fontsize=8.5, zorder=5,
                 weight="bold" if sig.get(r) else "normal",
