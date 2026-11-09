@@ -36,7 +36,7 @@ def load_condition(root, condition, device):
     pos = {k: i for i, k in enumerate(keys)}
     node_keys = [cdata.TARGET] + conds[condition]
     idx = np.array([pos[k] for k in node_keys])
-    kst = pd.to_datetime(u["hours_kst"] * 3_600_000_000_000, utc=True).tz_convert("Asia/Seoul")
+    kst = pd.to_datetime(u["hours_utc"], unit="h", utc=True).tz_convert("Asia/Seoul")   # resolution-safe (pandas 2/3)
     year = kst.year.to_numpy()
     split = np.select([year <= 2020, year <= 2022, year == 2023, year == 2024], ["buffer", "train", "validation", "test"], "buffer")
     tr = split == "train"

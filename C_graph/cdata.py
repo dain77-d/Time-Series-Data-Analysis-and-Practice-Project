@@ -107,7 +107,7 @@ def build_universe(root):
     assert filled.all(), [k for k, f in zip(all_keys, filled) if not f][:5]
     glob, gnames = asos(root)
     np.savez_compressed(WORK / "c_universe.npz", keys=np.array(all_keys), lon=lon, lat=lat, pm25=pm,
-                        hours_kst=HOURS.tz_convert("UTC").asi8 // 3_600_000_000_000, globals=glob, global_names=np.array(gnames))
+                        hours_utc=((HOURS - pd.Timestamp(0, tz="UTC")) // pd.Timedelta(hours=1)).to_numpy(), globals=glob, global_names=np.array(gnames))
     return {"nodes": len(all_keys), "conditions": len(conds), "missing_share_2021_2022": float(np.isnan(pm[(HOURS.year >= 2021) & (HOURS.year <= 2022)]).mean()),
             "target_missing_2021_2022": float(np.isnan(pm[(HOURS.year >= 2021) & (HOURS.year <= 2022), 0]).mean())}
 

@@ -56,6 +56,7 @@ if __name__ == "__main__":
     ap.add_argument("--only")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--epochs", type=int, default=40)
+    ap.add_argument("--threads", type=int, default=8, help="CPU threads per training process")
     a = ap.parse_args()
     root = cdata.data_root(a.data)
     out = cdata.RUNS
@@ -77,7 +78,8 @@ if __name__ == "__main__":
             name = f"{j['model']}__{j['condition']}__seed{j['seed']}"
             f = open(log / f"{name}.log", "w", encoding="utf-8")
             slot = slots.pop(0)
-            env = dict(os.environ, **({"CUDA_VISIBLE_DEVICES": str(slot % a.gpus)} if a.gpus else {}))
+            env = dict(os.environ, OMP_NUM_THREADS=str(a.threads), MKL_NUM_THREADS=str(a.threads),
+                       **({"CUDA_VISIBLE_DEVICES": str(slot % a.gpus)} if a.gpus else {}))
             p = subprocess.Popen([sys.executable, str(Path(__file__).parent / "train.py"), "--model", j["model"], "--condition", j["condition"],
                                   "--seed", str(j["seed"]), "--data", str(root), "--epochs", str(a.epochs)], stdout=f, stderr=subprocess.STDOUT, env=env)
             running.append((p, f, name, time.time(), slot))
