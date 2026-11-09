@@ -54,6 +54,7 @@ if __name__ == "__main__":
     ap.add_argument("--gpus", type=int, default=0, help="number of GPUs; overrides --workers with gpus*per_gpu")
     ap.add_argument("--per-gpu", type=int, default=1)
     ap.add_argument("--only")
+    ap.add_argument("--seeds", help="comma list; restrict runs to these seeds (time budget)")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--epochs", type=int, default=40)
     ap.add_argument("--threads", type=int, default=8, help="CPU threads per training process")
@@ -61,7 +62,7 @@ if __name__ == "__main__":
     a = ap.parse_args()
     root = cdata.data_root(a.data)
     out = cdata.RUNS
-    jobs = [j for j in plan(root) if not a.only or j["family"] in a.only.split(",")]
+    jobs = [j for j in plan(root) if (not a.only or j["family"] in a.only.split(",")) and (not a.seeds or str(j["seed"]) in a.seeds.split(","))]
     if a.list:
         from collections import Counter
         print(json.dumps({"total": len(jobs), "by_family": Counter(j["family"] for j in jobs),
