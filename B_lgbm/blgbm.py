@@ -32,7 +32,7 @@ HORIZONS, SEEDS = (3, 6, 12, 24), (11, 22, 33)
 BASE = dict(objective="regression", learning_rate=0.03, min_data_in_leaf=50, bagging_fraction=0.8, bagging_freq=1,
             lambda_l2=1.0, verbose=-1, max_bin=63)
 GRID = [dict(num_leaves=l, feature_fraction=f) for l in (15, 31) for f in (0.3, 0.5)]
-SHAP_CONDITIONS = ("F", "DN", "CTRL_CN_EAST", "CTRL_JP_EAST", "CTRL_JP_WEST25")
+SHAP_CONDITIONS = ("F", "DN", "CTRL_CN_EAST", "CTRL_JP_EAST", "CTRL_JP_WEST25", "F_TRAJ", "DN_TRAJ")
 DATA_VERSION = "B-v5-regions-1107+regional-pm25-inputs-v1.0.0"
 
 
@@ -50,13 +50,21 @@ def extra_columns(root, condition):
         return ds / "Regions_1107_Station_History" / "regions_1107_station_history.parquet", sets["china_east_station_history"]
     if condition == "CTRL_JP_EAST":
         return ds / "Regions_1107_Station_History" / "regions_1107_station_history.parquet", sets["japan_east_station_history"]
+    v3 = ds / "Origin_Features_2021_2024_v3" / "origin_features_2021_2024_kst.parquet"
     if condition == "CTRL_JP_WEST25":
-        return ds / "Origin_Features_2021_2024_v3" / "origin_features_2021_2024_kst.parquet", sets["japan_west_kept25_station_history_v3_columns"]
+        return v3, sets["japan_west_kept25_station_history_v3_columns"]
+    if condition.endswith("_TRAJ"):     # H1c: HYSPLIT trajectory weather (met_*) + route geometry (route_*), 114 numeric features
+        import pyarrow.parquet as pq
+        return v3, [c for c in pq.read_schema(v3).names if c.startswith(("met_", "route_")) and c != "route_history12h_sector"]
     return None, []
 
 
+def base_condition(condition):
+    return "DN" if condition.startswith("CTRL_") else condition.removesuffix("_TRAJ")
+
+
 def load(L, root, condition, h, split):
-    base = "DN" if condition.startswith("CTRL_") else condition
+    base = base_condition(condition)
     X, y, rows = L.load_xy(base, horizon=h, split=split, allow_test=split == "test")
     path, cols = extra_columns(root, condition)
     if cols:
@@ -89,6 +97,8 @@ def region_map(L, root, columns):
     for c in columns:
         if c in owner and owner[c]:
             reg.append(k2r.get(owner[c], "UNMAPPED")); st.append(stat.get(c) or "other")
+        elif c.startswith(("met_", "route_")):   # trajectory features (_TRAJ conditions)
+            reg.append("TRAJ_weather" if c.startswith("met_") else "TRAJ_route"); st.append(c.split("_")[1])
         elif c.startswith("obs_"):          # sidecar columns: obs_<cc>_<id>_pm25_<stat>
             key = c[4:6].upper() + ":" + c[7:].rsplit("_pm25_", 1)[0]
             reg.append(k2r.get(key, "UNMAPPED")); st.append(c.rsplit("_pm25_", 1)[1])

@@ -45,7 +45,9 @@ def score(root, split, final):
     drop = sorted(c for c in conds if c.startswith("DROP_"))
     fams = {"core": (["D67", "DN", "F"], [f"{e('DN')}:{e('D67')}", f"{e('F')}:{e('DN')}"]),
             "regional": (["DN", "F"] + ADD + drop, [f"{e(a)}:{e('DN')}" for a in ADD] + [f"{e('F')}:{e(d)}" for d in drop]),
-            "controls": (["DN"] + CTRL, [f"{e(c)}:{e('DN')}" for c in CTRL])}
+            "controls": (["DN"] + CTRL, [f"{e(c)}:{e('DN')}" for c in CTRL]),
+            "trajectory": (["D67", "DN", "F", "D67_TRAJ", "DN_TRAJ", "F_TRAJ"],          # H1c: + HYSPLIT trajectory weather/route
+                           [f"{e(c + '_TRAJ')}:{e(c)}" for c in ("D67", "DN", "F")])}
     lines = [f"# B scores ({split})\n"]
     for name, (cs, pairs) in fams.items():
         fs = [f for c in cs for f in sorted((RUNS / c).glob("seed*/predictions.parquet"))]
