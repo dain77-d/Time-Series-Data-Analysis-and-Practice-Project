@@ -27,222 +27,337 @@
   "test_guard": false,
   "does_not_train_models": true,
   "inference_caveat": "Overlap minimum HAC lag need not capture all additional serial dependence; predeclare lag/block sensitivity, do not tune on significance.",
-  "written_kst": "2026-11-09T15:13:09.172042+09:00",
-  "grid_path": "/workspace/tsda/data_v5/Dataset/Evaluation_Contract_20261107/evaluation_grid.parquet",
+  "written_kst": "2026-11-09T17:52:39.208681+09:00",
+  "grid_path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\data_v5\\Dataset\\Evaluation_Contract_20261107\\evaluation_grid.parquet",
   "grid_sha256": "6a7dac480d621745a8211b85ba4138a90953ad2a2ff5d417ee0a1aaf348e13db",
   "prediction_sources": [
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DN/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DN\\seed11\\predictions.parquet",
       "sha256": "8e15baf3ed10a5c56678500a3d13cc5f89d09b976f042f5663aee44c84f040a4",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DN/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DN\\seed22\\predictions.parquet",
       "sha256": "be028205e594991164659825c4bb92c6b17992a8c17474ba4c2a014ece3e164c",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DN/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DN\\seed33\\predictions.parquet",
       "sha256": "6a9aed535b4ddcd7432dc4334ac29c51a05b2039e24e7ee9175e41703b21a43b",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/F/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\F\\seed11\\predictions.parquet",
       "sha256": "90058b6bfa15490a5a66b29d899cb61b6af818e13f82402da2ff1439ecea1d68",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/F/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\F\\seed22\\predictions.parquet",
       "sha256": "1ada35048cc02fd43d6f31cbe96c50d2dc69854daaec442d59a29b8542c84cb4",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/F/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\F\\seed33\\predictions.parquet",
       "sha256": "f4b6ada7fa49aa00ef328a8def55a701d48c2a72f4391a8833465a60847b7b10",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_SHANDONG/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_SHANDONG\\seed11\\predictions.parquet",
       "sha256": "49ab2352ca31fcd7d3ed8de2ce97d438bd57f6e2e386fa194bb2699da47091f9",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_SHANDONG/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_SHANDONG\\seed22\\predictions.parquet",
       "sha256": "794c73fff990b7e796dc7a82a862c5c47d51aa3233f28bd1fd1ac6ffe5ad3272",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_SHANDONG/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_SHANDONG\\seed33\\predictions.parquet",
       "sha256": "5fdbf783b98d1fd4cbdb742346dade294ea1e30746cd847c3c81893aa903aceb",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_BTH/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_BTH\\seed11\\predictions.parquet",
       "sha256": "e0e1452732fbc037ed83e00ca41efff4cd41e86b641cf51707c523c3e3a892f9",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_BTH/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_BTH\\seed22\\predictions.parquet",
       "sha256": "574040ac293537592e971ea62efd4fe5cd6eb6bbdd8006570938853eef213508",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_BTH/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_BTH\\seed33\\predictions.parquet",
       "sha256": "17680b6e440ab6c8f4ccfee5bf7b0bc1834953aef1554bd68ccd2f5358f9e58a",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_LIAONING/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_LIAONING\\seed11\\predictions.parquet",
       "sha256": "b10a3d8fab16d3321e5ca1497d225c81c3b3636c98a22d19aef0c72d300db598",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_LIAONING/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_LIAONING\\seed22\\predictions.parquet",
       "sha256": "b4e9b61261328a8c5895d50dd462e13ad23be8006b4daedafe69b44872174247",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_LIAONING/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_LIAONING\\seed33\\predictions.parquet",
       "sha256": "1318f0f8f50f12c0c130f3c463fb1214c6edf7386971924ef632652660e8011c",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_JILIN/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_JILIN\\seed11\\predictions.parquet",
       "sha256": "0a526f470b06bc6d7ba145f0201f5a1ff68c472da3c9e6d2ee8c1e6dc59cc05c",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_JILIN/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_JILIN\\seed22\\predictions.parquet",
       "sha256": "386d6dd5a52e7b24ff9bfa4363c610ea36093b2d23b5a6cc52c527230e152b00",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_JILIN/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_JILIN\\seed33\\predictions.parquet",
       "sha256": "e42b65e5a17ed520b5ac2e96ad02c27ff411cbc02f5c1fe802cac43353d6d04f",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_HEILONGJIANG\\seed11\\predictions.parquet",
       "sha256": "17d552aecb3b75ee929ddd7ad4a32c8739fda1521931c2c418ce111ac22bada4",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_HEILONGJIANG/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_HEILONGJIANG\\seed22\\predictions.parquet",
       "sha256": "74f70fee5efb1df37efb1feac8ef85dcc8a5799782f95ab23506d0f6b0fe59cc",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_HEILONGJIANG/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_HEILONGJIANG\\seed33\\predictions.parquet",
       "sha256": "a66b98e682516e524352efd2522fafa75ad4ce0de9dadd8292917a13cbe38819",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_INNER_MONGOLIA\\seed11\\predictions.parquet",
       "sha256": "a0b8517e68ad7f9900cb8fd0a7460a1ab0c86efca002c5da659d13869533294a",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_INNER_MONGOLIA/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_INNER_MONGOLIA\\seed22\\predictions.parquet",
       "sha256": "0b3c1ec08b784c34ffe9b617e0988347aa52ad3556d37636c2934ff1eb204fd3",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_CN_INNER_MONGOLIA/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_CN_INNER_MONGOLIA\\seed33\\predictions.parquet",
       "sha256": "4286398744458f40134672a5a07668ad4b839a063e5b64d1df09efa901c29acc",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_JP/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_JP\\seed11\\predictions.parquet",
       "sha256": "085fdf111c4fc79f3b245be9ceee206f57452c90ac7553aa4fcc179ffe99d1f2",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_JP/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_JP\\seed22\\predictions.parquet",
       "sha256": "3f60d7e243c438b34789afa4f82b40bf212662e45e701ef30d50cbd823faddd7",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_JP/seed33/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_JP\\seed33\\predictions.parquet",
       "sha256": "60befce2da2960efca79d2caebefcfe8a04ed961eaaa8bb9f6ff7e37500f0130",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_MN/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_MN\\seed11\\predictions.parquet",
       "sha256": "8d3af5044b800d3c3189722872e558942c13d2228159221c64edce42f8f7eb22",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/ADD_MN/seed22/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_MN\\seed22\\predictions.parquet",
       "sha256": "b58f40e2d4c52f07ceadce7a894ae1a02781420d75b448374779a5cb9d465907",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_CN_BTH/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\ADD_MN\\seed33\\predictions.parquet",
+      "sha256": "4199ac4935f4e376f55022c5a9f1a21a57c5c728936e1d9c7db3332247892b57",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_BTH\\seed11\\predictions.parquet",
       "sha256": "64d4433f11303d90cf10e4e1abdfc7c2f877338c7e4e4e4876ad74c686b68418",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_CN_HEILONGJIANG/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_BTH\\seed22\\predictions.parquet",
+      "sha256": "528875262863cbf517bc8c7e9e8da5353cc4a9d41488a831ad44a427ff2b96da",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_BTH\\seed33\\predictions.parquet",
+      "sha256": "fda20eadce67bb82fa349a31a0dde337bf7ee387736c8db8ec359991cd4ff4e8",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_HEILONGJIANG\\seed11\\predictions.parquet",
       "sha256": "4b19e0ed4af7c2ca5d7bbf4e4c0c3b4426ac0650d4c09873daa1f26e8c6f7171",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_CN_INNER_MONGOLIA/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_HEILONGJIANG\\seed22\\predictions.parquet",
+      "sha256": "fa92fc53f027c6ec1ef67b964b72b584bc0c07bd96100563150be6a19a8938e8",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_HEILONGJIANG\\seed33\\predictions.parquet",
+      "sha256": "c908555a120f00228c9ce3fef0454165831852547881841824dab8bc1ff224f5",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_INNER_MONGOLIA\\seed11\\predictions.parquet",
       "sha256": "5f90235d4de5dab334c6b8ce063d48548bdb1dd2f686de2b2562f4aa5ff792d4",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_CN_JILIN/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_INNER_MONGOLIA\\seed22\\predictions.parquet",
+      "sha256": "37903f8ee47aaff496040a7a571636f5cf832546146fc96f489acf58ae15c683",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_INNER_MONGOLIA\\seed33\\predictions.parquet",
+      "sha256": "f0f39cd1366085117b4a6aee1433cc8ff6abe36579215633cbc1dc91695360cb",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_JILIN\\seed11\\predictions.parquet",
       "sha256": "d3e8e69e5f23cf4fa987e8a1a3265425d321389cc973635cd62b6b0ee3aee258",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_CN_LIAONING/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_JILIN\\seed22\\predictions.parquet",
+      "sha256": "2327037a873f24ceab7ebd2b338fadff8869ce98889a0f81bf9317b25699dba9",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_JILIN\\seed33\\predictions.parquet",
+      "sha256": "18e09754af26160adeb397840953a101e6d770baaa23ca65d4500927aa3cf1fa",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_LIAONING\\seed11\\predictions.parquet",
       "sha256": "379d8fcfb59e7336a92d3939f763648e503ff8adbff7c128b55afc6e13cc6a09",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_CN_SHANDONG/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_LIAONING\\seed22\\predictions.parquet",
+      "sha256": "37854fa330fcf0f1c5a1a80b9696792c88e77d6380edc9660ec7ee8268510ac2",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_LIAONING\\seed33\\predictions.parquet",
+      "sha256": "e45593a3b54ff3e11479d00fc72d1b9c0ccd8b547fa0ed0075b1e69f5e83a2e5",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_SHANDONG\\seed11\\predictions.parquet",
       "sha256": "b5c7d4fcfd5f1fc1ab9482bae68f1a35827d7e9412250131edd543b5a7f6c1c5",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_JP/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_SHANDONG\\seed22\\predictions.parquet",
+      "sha256": "f10a6f201f055a83cdc7d3833e507e51f8898b8c58c34c542bbe0ef722372a57",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_CN_SHANDONG\\seed33\\predictions.parquet",
+      "sha256": "0deeaf3ca3e4330855195bde2dc7d395b7d473918c638db620a291e657f698a6",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_JP\\seed11\\predictions.parquet",
       "sha256": "fce152341d86ab4e2661637ef36d787bd32198a08c8eaa16282e567b0e53dc3c",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_CAPITAL/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_JP\\seed22\\predictions.parquet",
+      "sha256": "d04f16e9c9bd4518573f8bdc641cc8c0c90fe0abf5b1eb2f07b8cb675a758bef",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_JP\\seed33\\predictions.parquet",
+      "sha256": "386039f0d3711a0aeaf7bf3fcb92c765433f6b093b751d3a68f0a6ca24484138",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_CAPITAL\\seed11\\predictions.parquet",
       "sha256": "5eff86c33b1e038c986c354a459c17919037310646c55796de217d7354820b9d",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_CHUNGCHEONG/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_CAPITAL\\seed22\\predictions.parquet",
+      "sha256": "cc07726e3ab17ea695f13f603e5d4b975e0556820773773789712b9b1d6d7e7d",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_CAPITAL\\seed33\\predictions.parquet",
+      "sha256": "7e21398595d093d3bbf5be4e615b5cf7e07e6291987967320ff80e75e0a76c5e",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_CHUNGCHEONG\\seed11\\predictions.parquet",
       "sha256": "d77ac2284c4dcc03c5102814dffc319a2f70af622b6349635b43897a4567482d",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_DAEGYEONG/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_CHUNGCHEONG\\seed22\\predictions.parquet",
+      "sha256": "cb06b1629656e44871fc2705444760ea0c87eac4dd3dc4cc532fb0ed5e4a0f65",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_CHUNGCHEONG\\seed33\\predictions.parquet",
+      "sha256": "5256affa64c35baa43625a52ea2135116ee39e0bc450ff38209e7dda78c4ceaf",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_DAEGYEONG\\seed11\\predictions.parquet",
       "sha256": "055d32637cc828728d638326d0e83bc3818c918a8ebbc415a055247aad769c7a",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_DONGNAM/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_DAEGYEONG\\seed22\\predictions.parquet",
+      "sha256": "1b0d3f344f7c314e33f100f6eba0f06f02526abc7f94188c43ed00f68fe59132",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_DAEGYEONG\\seed33\\predictions.parquet",
+      "sha256": "164bf37b0c3f8342c1a7b071acb4da77b48d5a5141cfb1d214fdb74d741c56f1",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_DONGNAM\\seed11\\predictions.parquet",
       "sha256": "e6f5bb645895d3c881868ac4fe07778d4d8dce539d6f820eb648153b36e6793f",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_GANGWON/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_DONGNAM\\seed22\\predictions.parquet",
+      "sha256": "5825287fbc909c455047f67e6ae8a2d07c3f6fdf5b65bf812d8db51a2b33b74e",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_DONGNAM\\seed33\\predictions.parquet",
+      "sha256": "3857e6e6a4d8ebcef837dc8e201d85b4af3f0c4b07169a8ef0f859352048de24",
+      "sidecar": null
+    },
+    {
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_GANGWON\\seed11\\predictions.parquet",
       "sha256": "c7a742bf035fcb7dce0c4c8016dab84afc2c9b8722a3e3b2db3ba83ac0a002d7",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_HONAM/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_HONAM\\seed11\\predictions.parquet",
       "sha256": "359ad8d4543530c1354075c4fdb93e8b77af668c6e03dfbf6b8eb1b2081b0edd",
       "sidecar": null
     },
     {
-      "path": "/workspace/tsda/repo/results/C/runs/C_GCNGRU/DROP_KR_JEJU/seed11/predictions.parquet",
+      "path": "C:\\Users\\essay\\OneDrive\\바탕 화면\\시계열데이터분석및실습\\TSDA-Project\\results\\C\\runs\\C_GCNGRU\\DROP_KR_JEJU\\seed11\\predictions.parquet",
       "sha256": "802f3497a1f807991d61b8cc9b5cf0291000aaf4677705af892bcf58411668ba",
       "sidecar": null
     }

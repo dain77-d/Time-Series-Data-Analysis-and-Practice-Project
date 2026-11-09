@@ -1,0 +1,45 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_KR_CAPITAL seed22 ep0 train=0.5496 val=0.5674 33.09s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep1 train=0.5013 val=0.5376 28.6s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep2 train=0.4793 val=0.5251 28.5s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep3 train=0.4649 val=0.5109 29.7s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep4 train=0.4575 val=0.5121 28.5s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep5 train=0.4530 val=0.5123 28.5s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep6 train=0.4484 val=0.5111 24.2s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep7 train=0.4435 val=0.5062 22.04s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep8 train=0.4397 val=0.5056 22.07s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep9 train=0.4406 val=0.5118 22.1s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep10 train=0.4382 val=0.5230 21.96s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep11 train=0.4374 val=0.5057 22.08s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep12 train=0.4339 val=0.5133 22.05s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep13 train=0.4317 val=0.5094 22.11s
+C_GCNGRU DROP_KR_CAPITAL seed22 ep14 train=0.4293 val=0.5087 22.32s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_KR_CAPITAL",
+ "seed": 22,
+ "nodes": 439,
+ "parameters": 10692,
+ "best_val_loss": 0.505591869354248,
+ "best_epoch": 8,
+ "epochs_run": 15,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 394.6,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

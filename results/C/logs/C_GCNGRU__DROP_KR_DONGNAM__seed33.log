@@ -1,0 +1,49 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_KR_DONGNAM seed33 ep0 train=0.5234 val=0.5232 26.91s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep1 train=0.4711 val=0.5047 26.5s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep2 train=0.4519 val=0.5033 26.41s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep3 train=0.4358 val=0.4792 26.62s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep4 train=0.4288 val=0.4747 26.4s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep5 train=0.4230 val=0.4707 26.53s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep6 train=0.4161 val=0.4685 26.46s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep7 train=0.4152 val=0.4691 26.38s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep8 train=0.4112 val=0.4666 26.47s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep9 train=0.4079 val=0.4696 26.48s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep10 train=0.4061 val=0.4737 26.55s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep11 train=0.4035 val=0.4701 26.49s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep12 train=0.4014 val=0.4645 26.6s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep13 train=0.4006 val=0.4692 26.51s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep14 train=0.3973 val=0.4747 26.39s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep15 train=0.3958 val=0.4707 26.5s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep16 train=0.3929 val=0.4706 26.4s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep17 train=0.3901 val=0.4693 17.34s
+C_GCNGRU DROP_KR_DONGNAM seed33 ep18 train=0.3895 val=0.4697 15.31s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_KR_DONGNAM",
+ "seed": 33,
+ "nodes": 519,
+ "parameters": 10692,
+ "best_val_loss": 0.46451693773269653,
+ "best_epoch": 12,
+ "epochs_run": 19,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 487.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

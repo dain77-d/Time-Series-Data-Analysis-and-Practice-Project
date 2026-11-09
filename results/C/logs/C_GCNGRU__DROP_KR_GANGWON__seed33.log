@@ -1,0 +1,17 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_KR_GANGWON seed33 ep0 train=0.5242 val=0.5230 29.31s
+C_GCNGRU DROP_KR_GANGWON seed33 ep1 train=0.4642 val=0.4956 28.68s
+C_GCNGRU DROP_KR_GANGWON seed33 ep2 train=0.4421 val=0.4990 28.91s
+C_GCNGRU DROP_KR_GANGWON seed33 ep3 train=0.4313 val=0.4808 28.73s
+C_GCNGRU DROP_KR_GANGWON seed33 ep4 train=0.4271 val=0.4794 28.76s
+C_GCNGRU DROP_KR_GANGWON seed33 ep5 train=0.4223 val=0.4781 28.78s
+C_GCNGRU DROP_KR_GANGWON seed33 ep6 train=0.4156 val=0.4778 28.9s
+C_GCNGRU DROP_KR_GANGWON seed33 ep7 train=0.4154 val=0.4767 28.75s
+C_GCNGRU DROP_KR_GANGWON seed33 ep8 train=0.4116 val=0.4777 28.78s
+C_GCNGRU DROP_KR_GANGWON seed33 ep9 train=0.4091 val=0.4777 28.77s
+C_GCNGRU DROP_KR_GANGWON seed33 ep10 train=0.4068 val=0.4853 29.85s
+C_GCNGRU DROP_KR_GANGWON seed33 ep11 train=0.4040 val=0.4814 34.0s
+C_GCNGRU DROP_KR_GANGWON seed33 ep12 train=0.4011 val=0.4757 35.2s
+C_GCNGRU DROP_KR_GANGWON seed33 ep13 train=0.4007 val=0.4814 34.3s

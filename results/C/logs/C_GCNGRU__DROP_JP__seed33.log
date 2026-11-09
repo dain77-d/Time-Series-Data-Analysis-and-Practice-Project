@@ -1,0 +1,45 @@
+/workspace/tsda/repo/C_graph/train.py:194: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  losses.append(float(loss))
+C_GCNGRU DROP_JP seed33 ep0 train=0.5249 val=0.5234 32.98s
+C_GCNGRU DROP_JP seed33 ep1 train=0.4676 val=0.4969 29.8s
+C_GCNGRU DROP_JP seed33 ep2 train=0.4437 val=0.5018 29.8s
+C_GCNGRU DROP_JP seed33 ep3 train=0.4315 val=0.4775 29.7s
+C_GCNGRU DROP_JP seed33 ep4 train=0.4265 val=0.4752 29.8s
+C_GCNGRU DROP_JP seed33 ep5 train=0.4219 val=0.4743 29.7s
+C_GCNGRU DROP_JP seed33 ep6 train=0.4151 val=0.4748 29.8s
+C_GCNGRU DROP_JP seed33 ep7 train=0.4155 val=0.4724 29.7s
+C_GCNGRU DROP_JP seed33 ep8 train=0.4118 val=0.4713 29.7s
+C_GCNGRU DROP_JP seed33 ep9 train=0.4090 val=0.4729 29.9s
+C_GCNGRU DROP_JP seed33 ep10 train=0.4065 val=0.4798 29.7s
+C_GCNGRU DROP_JP seed33 ep11 train=0.4048 val=0.4777 29.7s
+C_GCNGRU DROP_JP seed33 ep12 train=0.4012 val=0.4716 29.7s
+C_GCNGRU DROP_JP seed33 ep13 train=0.4012 val=0.4755 29.7s
+C_GCNGRU DROP_JP seed33 ep14 train=0.3979 val=0.4787 30.2s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_JP",
+ "seed": 33,
+ "nodes": 577,
+ "parameters": 10692,
+ "best_val_loss": 0.4712519645690918,
+ "best_epoch": 8,
+ "epochs_run": 15,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 476.4,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

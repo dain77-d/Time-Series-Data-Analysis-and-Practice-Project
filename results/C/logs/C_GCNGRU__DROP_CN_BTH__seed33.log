@@ -16,3 +16,34 @@ C_GCNGRU DROP_CN_BTH seed33 ep11 train=0.4073 val=0.4828 44.3s
 C_GCNGRU DROP_CN_BTH seed33 ep12 train=0.4041 val=0.4741 45.8s
 C_GCNGRU DROP_CN_BTH seed33 ep13 train=0.4037 val=0.4793 44.2s
 C_GCNGRU DROP_CN_BTH seed33 ep14 train=0.4005 val=0.4836 46.2s
+C_GCNGRU DROP_CN_BTH seed33 ep15 train=0.3985 val=0.4814 44.9s
+C_GCNGRU DROP_CN_BTH seed33 ep16 train=0.3960 val=0.4765 44.1s
+C_GCNGRU DROP_CN_BTH seed33 ep17 train=0.3935 val=0.4800 42.0s
+C_GCNGRU DROP_CN_BTH seed33 ep18 train=0.3913 val=0.4826 42.6s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_CN_BTH",
+ "seed": 33,
+ "nodes": 592,
+ "parameters": 10692,
+ "best_val_loss": 0.4741474688053131,
+ "best_epoch": 12,
+ "epochs_run": 19,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 888.7,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

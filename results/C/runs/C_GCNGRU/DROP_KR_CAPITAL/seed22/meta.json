@@ -1,0 +1,119 @@
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_KR_CAPITAL",
+ "seed": 22,
+ "nodes": 439,
+ "parameters": 10692,
+ "best_val_loss": 0.505591869354248,
+ "best_epoch": 8,
+ "epochs_run": 15,
+ "history": [
+  {
+   "epoch": 0,
+   "train_loss": 0.5496416985988617,
+   "val_loss": 0.5673872828483582,
+   "seconds": 33.09
+  },
+  {
+   "epoch": 1,
+   "train_loss": 0.5013098010834116,
+   "val_loss": 0.5376302599906921,
+   "seconds": 28.6
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.4792979092058474,
+   "val_loss": 0.5251068472862244,
+   "seconds": 28.5
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.4648958046505921,
+   "val_loss": 0.5109043121337891,
+   "seconds": 29.7
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.4574839919805527,
+   "val_loss": 0.5121327638626099,
+   "seconds": 28.5
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.45303822194572785,
+   "val_loss": 0.5122610330581665,
+   "seconds": 28.5
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.4484188240157427,
+   "val_loss": 0.511147677898407,
+   "seconds": 24.2
+  },
+  {
+   "epoch": 7,
+   "train_loss": 0.44346726190869823,
+   "val_loss": 0.5062016844749451,
+   "seconds": 22.04
+  },
+  {
+   "epoch": 8,
+   "train_loss": 0.4397381559340623,
+   "val_loss": 0.505591869354248,
+   "seconds": 22.07
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.4406023942423563,
+   "val_loss": 0.5117562413215637,
+   "seconds": 22.1
+  },
+  {
+   "epoch": 10,
+   "train_loss": 0.4382205949756351,
+   "val_loss": 0.5229618549346924,
+   "seconds": 21.96
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.43740300627520484,
+   "val_loss": 0.5057314038276672,
+   "seconds": 22.08
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.4339239163881671,
+   "val_loss": 0.5133129358291626,
+   "seconds": 22.05
+  },
+  {
+   "epoch": 13,
+   "train_loss": 0.43174367109789463,
+   "val_loss": 0.5093734860420227,
+   "seconds": 22.11
+  },
+  {
+   "epoch": 14,
+   "train_loss": 0.42934925288614567,
+   "val_loss": 0.5086923241615295,
+   "seconds": 22.32
+  }
+ ],
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 394.6,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}

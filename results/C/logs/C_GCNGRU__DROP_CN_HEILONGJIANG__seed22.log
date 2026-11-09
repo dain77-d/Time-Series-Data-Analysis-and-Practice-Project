@@ -16,3 +16,36 @@ C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep11 train=0.4087 val=0.4719 46.0s
 C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep12 train=0.4052 val=0.4751 46.6s
 C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep13 train=0.4037 val=0.4805 44.6s
 C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep14 train=0.4022 val=0.4698 45.0s
+C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep15 train=0.4011 val=0.4804 44.7s
+C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep16 train=0.3993 val=0.4804 44.5s
+C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep17 train=0.3947 val=0.4831 42.2s
+C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep18 train=0.3967 val=0.4754 42.19s
+C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep19 train=0.3938 val=0.4771 30.2s
+C_GCNGRU DROP_CN_HEILONGJIANG seed22 ep20 train=0.3919 val=0.4839 31.3s
+{
+ "model": "C_GCNGRU",
+ "condition": "DROP_CN_HEILONGJIANG",
+ "seed": 22,
+ "nodes": 595,
+ "parameters": 10692,
+ "best_val_loss": 0.46980246901512146,
+ "best_epoch": 14,
+ "epochs_run": 21,
+ "hyper": {
+  "window": 48,
+  "epochs": 40,
+  "patience": 6,
+  "batch": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dist_sigma_km": 182.34497839213313,
+  "dist_cutoff_km": 500.0,
+  "max_batches": 0
+ },
+ "train_origins": 17499,
+ "validation_origins": 2920,
+ "test_origins": 2928,
+ "device": "cuda",
+ "seconds": 937.1,
+ "data_version": "C-v5-regions-1107+regional-pm25-inputs-v1.0.0"
+}
