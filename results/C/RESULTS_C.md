@@ -24,6 +24,8 @@
 
 C_GRU(F)는 Persistence보다 오차가 지평별로 **14%, 17%, 20%, 22%** 작습니다.
 
+![C accuracy](analysis/validation/c_accuracy_by_horizon.png)
+
 ## 가설 판정
 
 | ID | 가설 | 결과 | 판정 |
@@ -36,6 +38,26 @@ C_GRU(F)는 Persistence보다 오차가 지평별로 **14%, 17%, 20%, 22%** 작�
 | C-H6 | 중국 의존도는 겨울·서쪽 경로에서 크다 | GRU 가리기 결과, 랴오닝·산둥 의존도는 **추운 계절**에 큽니다(12시간: 랴오닝 4.2% vs 2.7%, 산둥 4.7% vs 0.4%). 하지만 경로별로는 서쪽(1.6–3.1%)보다 동쪽(5.5–7.3%)이 큽니다. 궤적 고도 바람이 지상 바람보다 조건을 더 잘 가르지도 않습니다 | 계절은 지지, 경로는 기각 |
 
 ## 권역 기여 (GRU, F 모델)
+
+### 지도로 보기
+
+**지역 가리기(의존도):** 원 넓이는 그 권역을 가렸을 때 RMSE가 몇 % 늘어나는지입니다. 굵은 테두리는 팀 규칙상 유의하다는 뜻이고, 별은 서울 중구입니다.
+
+![dependence map](analysis/validation/maps/map_dependence_by_horizon.png)
+
+**의존도 vs 고유 정보 (12시간):** 왼쪽은 학습된 모델에서 권역을 가린 결과, 오른쪽은 그 권역을 빼고 다시 학습한 결과입니다. 왼쪽에서 크던 중국 권역의 효과가 오른쪽에서는 거의 사라집니다. 즉 다른 측정소 정보로 대체됩니다.
+
+![unique vs dependence](analysis/validation/maps/map_unique_vs_dependence_h12.png)
+
+**계절별 의존도 (12시간):**
+
+![season map](analysis/validation/maps/map_dependence_season_h12.png)
+
+### 표·검정 그림
+
+![core tests](analysis/validation/c_core_tests.png)
+
+![regional forest](analysis/validation/c_regional_forest.png)
 
 ![C_GRU region contribution](analysis/validation/region_contribution_C_GRU.png)
 
