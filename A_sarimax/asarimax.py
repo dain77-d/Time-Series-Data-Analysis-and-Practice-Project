@@ -14,7 +14,7 @@ Region mean = mean over the region's stations of log1p PM2.5, standardised on 20
 Granger: 2021-22 hourly, OLS of Seoul on its own p lags + region p lags (p by AIC from {1,2,3,6,12,24}),
 F-test region lags = 0; all, cold/warm and west/other-route subsets; Holm over every test.
 
-Usage: python asarimax.py [--jobs 32] [--data ROOT]   then   python asarimax.py --score [--split test --final]
+Usage: python asarimax.py [--jobs 32] [--data ROOT];  python asarimax.py --score [--split test --final];  python asarimax.py --figures
 Output: results/A/runs/A_SARIMAX/<cond>/seed0/predictions.parquet, results/A/{fits,granger,lag_choice,coefficients}.csv
 """
 import argparse
@@ -253,6 +253,22 @@ def _aic(args):
         return SARIMAX(d["y"][d["train"]], X[d["train"]], order=o).fit(disp=False, maxiter=300).aic
 
 
+def figures():
+    sys.path.insert(0, str(REPO / "B_lgbm"))
+    from banalysis import heat
+    lc = pd.read_csv(OUT / "lag_choice.csv")
+    imp = lc.assign(v=100 * (lc.val_rmse_base - lc.val_rmse) / lc.val_rmse_base).pivot(index="region", columns="horizon", values="v")
+    heat(imp.sort_values(6, ascending=False).rename(columns=lambda h: f"{h} h"),
+         "A SARIMAX: RMSE improvement over BASE, % (2023; lag chosen on 2023)", OUT / "a_region_improvement.png", fmt="{:.1f}", cmap="RdBu")
+    lag = lc.pivot(index="region", columns="horizon", values="lag").loc[imp.sort_values(6, ascending=False).index]
+    lag.to_csv(OUT / "a_lag_table.csv")
+    g = pd.read_csv(OUT / "granger.csv")
+    p = g.assign(v=-np.log10(g.p_holm.clip(lower=1e-300))).pivot(index="region", columns="subset", values="v")
+    heat(p.loc[p["all"].sort_values(ascending=False).index], "Granger region -> Seoul, -log10 Holm p (2021-22)",
+         OUT / "a_granger.png", fmt="{:.0f}", cmap="viridis")
+    print("figures ->", OUT)
+
+
 def score(root, split, final):
     fs = sorted((OUT / "runs").glob("A_SARIMAX/*/seed0/predictions.parquet"))
     conds = [f.parts[-3] for f in fs]
@@ -271,9 +287,12 @@ if __name__ == "__main__":
     ap.add_argument("--score", action="store_true")
     ap.add_argument("--split", default="validation", choices=["validation", "test"])
     ap.add_argument("--final", action="store_true")
+    ap.add_argument("--figures", action="store_true")
     a = ap.parse_args()
     root = cdata.data_root(a.data)
-    if a.score:
+    if a.figures:
+        figures()
+    elif a.score:
         score(root, a.split, a.final)
     else:
         main(root, a.jobs)

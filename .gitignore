@@ -2,3 +2,6 @@ work/
 __pycache__/
 *.pyc
 results/C/queue.log
+results/**/model.pt
+results/**/queue.log
+results/A_queue.log
