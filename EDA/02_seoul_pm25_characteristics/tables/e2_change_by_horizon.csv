@@ -1,0 +1,5 @@
+﻿horizon,persistence_RMSE_train,mean_abs_change,share_change_gt_10,corr_y_t_y_t+h
+3,7.345,4.697,0.1,0.896
+6,10.189,6.52,0.176,0.8
+12,13.487,8.768,0.272,0.649
+24,16.921,10.945,0.348,0.45

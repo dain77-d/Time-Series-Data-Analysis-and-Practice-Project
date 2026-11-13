@@ -1,0 +1,57 @@
+﻿by,group,horizon,persistence_RMSE
+season,DJF,3,8.434
+season,JJA,3,5.6
+season,MAM,3,8.462
+season,SON,3,6.477
+season,DJF,6,11.734
+season,JJA,6,7.528
+season,MAM,6,12.035
+season,SON,6,8.747
+season,DJF,12,15.853
+season,JJA,12,9.477
+season,MAM,12,16.326
+season,SON,12,10.997
+season,DJF,24,19.915
+season,JJA,24,11.116
+season,MAM,24,20.745
+season,SON,24,14.036
+route_cluster,C1 SW-slow,3,8.197
+route_cluster,C2 E-mid,3,4.445
+route_cluster,C3 W-mid,3,8.432
+route_cluster,C4 SW-mid,3,8.133
+route_cluster,C5 NW-fast,3,5.682
+route_cluster,C6 NW-fast,3,7.006
+route_cluster,C1 SW-slow,6,11.02
+route_cluster,C2 E-mid,6,5.805
+route_cluster,C3 W-mid,6,11.887
+route_cluster,C4 SW-mid,6,11.883
+route_cluster,C5 NW-fast,6,7.674
+route_cluster,C6 NW-fast,6,10.108
+route_cluster,C1 SW-slow,12,15.136
+route_cluster,C2 E-mid,12,7.422
+route_cluster,C3 W-mid,12,15.09
+route_cluster,C4 SW-mid,12,16.197
+route_cluster,C5 NW-fast,12,9.885
+route_cluster,C6 NW-fast,12,12.705
+route_cluster,C1 SW-slow,24,18.863
+route_cluster,C2 E-mid,24,8.819
+route_cluster,C3 W-mid,24,20.302
+route_cluster,C4 SW-mid,24,19.377
+route_cluster,C5 NW-fast,24,12.144
+route_cluster,C6 NW-fast,24,15.419
+level_at_t,<=15,3,3.973
+level_at_t,15-35,3,7.22
+level_at_t,35-75,3,13.351
+level_at_t,>75,3,22.524
+level_at_t,<=15,6,5.501
+level_at_t,15-35,6,9.962
+level_at_t,35-75,6,18.281
+level_at_t,>75,6,32.946
+level_at_t,<=15,12,7.823
+level_at_t,15-35,12,13.013
+level_at_t,35-75,12,23.644
+level_at_t,>75,12,44.111
+level_at_t,<=15,24,10.293
+level_at_t,15-35,24,16.068
+level_at_t,35-75,24,28.478
+level_at_t,>75,24,59.192

@@ -1,0 +1,11 @@
+﻿dataset,rows,units,first,last,pollutants
+Korea national PM2.5,19400865,573,2021-01-01 00:00,2024-12-31 23:00,pm25
+Korea 34 stations (6 pollutants),1192176,34,2021-01-01 00:00,2024-12-31 23:00,"pm25,pm10,so2,no2,o3,co"
+China 48 stations,1683072,48,2021-01-01 00:00,2024-12-31 23:00,"pm25,pm10,so2,no2,o3,co"
+China border cities,455832,13,2021-01-01 00:00,2024-12-31 23:00,"pm25,pm10"
+China east (control),1051920,30,2021-01-01 00:00,2024-12-31 23:00,"pm25,pm10"
+Japan west,7994592,228,2021-01-01 00:00,2024-12-31 23:00,pm25
+Japan east (control),5364792,153,2021-01-01 00:00,2024-12-31 23:00,pm25
+Mongolia (Ulaanbaatar),35064,1,2021-01-01 00:00,2024-12-31 23:00,"pm25,pm10"
+ASOS Seoul 108 / Baengnyeong 102,70128,2,2021-01-01 00:00,2024-12-31 23:00,-
+HYSPLIT back-trajectory points,2559672,3,2021-01-01 00:00,2024-12-31 21:00,-

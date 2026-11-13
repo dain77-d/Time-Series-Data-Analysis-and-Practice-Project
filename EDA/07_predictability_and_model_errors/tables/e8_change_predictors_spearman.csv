@@ -1,0 +1,18 @@
+﻿,+3 h,+6 h,+12 h,+24 h
+Seoul change last 3 h,-0.102,-0.106,-0.162,-0.121
+Seoul level (log),-0.218,-0.298,-0.391,-0.476
+Seoul minus 7-day mean,-0.213,-0.291,-0.382,-0.455
+Baengnyeong minus Seoul,0.256,0.333,0.366,0.358
+Baengnyeong change last 6 h,0.097,0.155,0.135,0.104
+KR Chungcheong minus Seoul,0.288,0.335,0.398,0.334
+China mean minus Seoul,0.271,0.365,0.505,0.573
+China mean change last 12 h,0.029,0.085,0.196,0.208
+CN_BTH change last 12 h,0.027,0.072,0.154,0.186
+CN_SHANDONG change last 12 h,0.067,0.105,0.163,0.157
+CN_LIAONING change last 12 h,0.024,0.07,0.142,0.141
+CN_JILIN change last 12 h,0.004,0.043,0.111,0.102
+CN_HEILONGJIANG change last 12 h,-0.035,-0.016,0.068,0.061
+CN_INNER_MONGOLIA change last 12 h,-0.005,0.029,0.09,0.1
+wind speed 108,-0.109,-0.102,-0.06,0.023
+u wind 102 (west+),-0.017,-0.021,-0.009,0.024
+pressure 108 change 12 h,0.036,0.077,0.131,0.139

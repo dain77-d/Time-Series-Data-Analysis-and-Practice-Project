@@ -1,6 +1,8 @@
 # 서울 중구 PM2.5 예측: 어느 지역 정보가, 언제 도움이 되나
 
-**Team06 · 시계열데이터분석및실습**
+**Team06 · 시계열데이터분석및실습** · 담당: [dain77-d](https://github.com/dain77-d)
+
+이 저장소는 팀 프로젝트에서 **제가 맡은 부분(EDA, 모델 A·B·C)의 코드와 결과 전체**입니다. 팀 공용 저장소는 [CHVRMER/TSA-PM2.5-Forecasting-in-Seoul](https://github.com/CHVRMER/TSA-PM2.5-Forecasting-in-Seoul)이고, D(DCRNN)는 팀원이 맡았습니다.
 
 서울 중구(KR:111121) PM2.5의 **3·6·12·24시간 뒤 값**을 예측합니다. 국내 514곳, 중국·일본·몽골 86곳의 관측과 HYSPLIT 역궤적을 이용해 다음 세 가지를 검증합니다.
 
@@ -8,14 +10,46 @@
 2. 언제 도움이 되는가
 3. 어떤 모델 구조가 그 정보를 잘 쓰는가
 
-| 모델 | 방법 | 역할 |
-|---|---|---|
-| **A** | SARIMAX(권역 하나씩) + 그랜저 검정 | 선형 기준선, "앞서 움직이는 권역" |
-| **B** | LightGBM 29개 입력 조건 + TreeSHAP | 본론: 정확도와 예측 근거 분해 |
-| **C** | GRU / 거리 그래프 GCN-GRU / 무작위 그래프 대조 | 신경망 재현, 그래프의 가치, 지역 가리기 |
-| D | DCRNN (팀원 담당) | 방향 그래프 vs 대칭 그래프 |
+## 제가 한 일
 
-> **현재 상태 (2026-11-09):** 2023 검증 결과입니다. 2024 시험 구간은 모든 설정을 동결한 뒤 `--final`로 한 번만 엽니다. C는 177회 중 168회를 완료했습니다(GCN DROP 4개 권역은 일부 시드만 있음). 궤적 고도 바람·혼합고 특징(H1c)과 다른 오염물질은 아직 입력에 넣지 않았으며, 다음 실험입니다.
+| 부분 | 한 일 | 규모 | 코드 · 결과 |
+|---|---|---|---|
+| **EDA** | 자료 품질 점검부터 650개 측정소 네트워크까지 8개 유형으로 탐색 | 스크립트 13개, 그림 56장, 표 59개 | [`EDA/`](EDA/) |
+| **A** | SARIMAX(권역 하나씩) + 그랜저 검정(계절·경로별): 선형 기준선, "앞서 움직이는 권역" | 20개 조건 | [`A_sarimax/`](A_sarimax/) · [결과](results/A/RESULTS_A.md) |
+| **B** | LightGBM 29개 입력 조건 × 시드 3개 + TreeSHAP: 정확도와 예측 근거 분해 | 87회 학습 | [`B_lgbm/`](B_lgbm/) · [결과](results/B/RESULTS_B.md) |
+| **C** | GRU / 거리 그래프 GCN-GRU / 무작위 그래프 대조 + 지역 가리기·DROP·ADD | 학습 168회 + 가리기 90회 | [`C_graph/`](C_graph/) · [결과](results/C/RESULTS_C.md) |
+| 공통 | 팀 채점기 기반 가설별 검정 묶음(DM 검정·블록 bootstrap·Holm), 미래 정보 누출 검사, 파이프라인 문서, 팀 진행 보고서 | | [`docs/`](docs/) · [`reports/`](reports/) |
+
+**설계에서 신경 쓴 점**
+- **한 번만 여는 시험 구간:** 설정 선택은 2023 검증으로만 하고, 2024는 `--final`로 한 번만 엽니다.
+- **대조 지역(음성 대조군):** 궤적이 거의 지나지 않는 중국 동부·일본 동해 쪽을 일부러 넣었습니다. 효과가 나오면 "수송"이 아니라 공통 기상 신호라는 경고로 씁니다.
+- **의존 vs 고유 정보 구분:** 학습된 모델에서 지역을 가리는 실험(의존)과 빼고 다시 학습하는 실험(고유 정보)을 나눠, "쓰는 정보"와 "대체할 수 없는 정보"를 구분했습니다.
+- **재현성:** 시드 3개(11·22·33)로 앙상블과 시드별 점수를 함께 보고합니다. C 모델은 미래 값을 바꿔도 예측이 변하지 않는지 검사합니다(`C_graph/test_causal.py`).
+
+**한 줄 결론:** 해외 관측소를 얼마나 많이 넣는가보다, **이동 경로와 시차를 고려해 그 정보를 어떻게 쓰는가**가 서울 PM2.5 예측에서 더 중요합니다. EDA와 A·B·C가 같은 방향을 가리킵니다.
+
+> **현재 상태 (2026-11-13):** 2023 검증 결과입니다. 2024 시험 구간은 아직 열지 않았습니다. C는 177회 중 168회를 완료했습니다(GCN DROP 4개 권역은 일부 시드만 있음). 궤적 고도 바람·혼합고 특징(H1c)은 B 코드에 조건만 추가했고 결과는 아직 없습니다.
+
+---
+
+## EDA: 데이터에서 먼저 확인한 것
+
+학습 구간(2021–22)만 써서 8개 유형으로 나눴습니다. 목차와 전체 발견은 [`EDA/README.md`](EDA/README.md)에 있습니다.
+
+| # | 유형 | 대표 발견 |
+|---|---|---|
+| 1 | [자료 구성과 품질](EDA/01_data_inventory_and_quality/) | 측정소 650곳 가용률 92–99%. 중국 오류값(9985), PM2.5 > PM10 1만 7천 시간 등 정제 대상 확인 |
+| 2 | [서울 PM2.5 특성](EDA/02_seoul_pm25_characteristics/) | 주기로 설명되지 않는 변동 51%, 24시간 뒤 값과의 상관 0.45뿐 |
+| 3 | [기상 요인](EDA/03_meteorological_drivers/) | 백령도 서풍이면 12시간 뒤 서울이 평균 +8.8 µg/m³ |
+| 4 | [공간 상관](EDA/04_spatial_correlation_structure/) | 같은 시각 상관은 약하지만 시차를 맞추면 중국 권역이 12–24시간 앞섬(시속 35–46 km) |
+| 5 | [이동경로와 사건](EDA/05_transport_pathways_and_events/) | 서해 횡단 경로 평균 27 vs 동쪽 경로 10 µg/m³. 2022 설날 불꽃놀이 급등이 백령도 +8시간 → 서울 +21시간 |
+| 6 | [화학 성분](EDA/06_chemical_composition/) | 백령도와 서울은 PM2.5가 비슷하지만 PM2.5당 NO₂는 서울이 5배 |
+| 7 | [예측 가능성과 모델 오차](EDA/07_predictability_and_model_errors/) | 해외 정보는 평균으로는 효과가 없지만, 정체·서쪽 경로의 24시간 예측에서 RMSE를 0.75–1.51 줄임 |
+| 8 | [다지점 네트워크](EDA/08_multi_station_network/) | 650곳 모두 서쪽일수록 먼저 움직임. 큰 사례 4개 모두 중국 북부 → 한국 → 일본 순으로 전파 |
+
+![route clusters](EDA/05_transport_pathways_and_events/figures/e5_cluster_paths.png)
+
+![network lead lag](EDA/08_multi_station_network/figures/e11_station_lead_lag_map.png)
 
 ---
 
@@ -90,6 +124,7 @@
 ## 폴더 구조
 
 ```
+EDA/         01–08 유형별 폴더 (스크립트, figures/, tables/, README), common.py, PLAN.md
 A_sarimax/   asarimax.py        SARIMAX 권역별 + 그랜저 (+ --score, --figures)
 B_lgbm/      blgbm.py           LightGBM 29조건 + TreeSHAP
              banalysis.py       채점, SHAP 표·그림
@@ -118,6 +153,7 @@ python A_sarimax/asarimax.py --jobs 48
 python C_graph/occlude.py && python C_graph/score_all.py && python C_graph/region_contribution.py
 python B_lgbm/banalysis.py && python A_sarimax/asarimax.py --score && python A_sarimax/asarimax.py --figures
 python C_graph/plot_map.py && python C_graph/plot_summary.py && python B_lgbm/bplots.py
+python EDA/05_transport_pathways_and_events/eda_e5_trajectories.py   # EDA: 이것 먼저, 나머지 EDA 스크립트는 순서 무관
 ```
 
 - 실행 시간(L40S 1장, 128코어 기준): C 약 7–8시간, B 약 3시간(C와 동시), A 약 1시간

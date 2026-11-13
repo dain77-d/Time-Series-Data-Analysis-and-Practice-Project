@@ -1,0 +1,4 @@
+﻿type,seoul_no2_ppb_per_pm25,seoul_pm25_pm10,baengnyeong_pm25_before
+local build-up,0.608,0.663,75.5
+mixed,0.591,0.657,56.0
+transported,0.428,0.694,90.0

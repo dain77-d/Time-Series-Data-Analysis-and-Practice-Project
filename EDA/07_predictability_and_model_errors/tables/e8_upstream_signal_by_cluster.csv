@@ -1,0 +1,73 @@
+﻿cluster,signal,horizon,spearman
+C1 SW-slow,Baengnyeong minus Seoul,6,0.309
+C1 SW-slow,Baengnyeong minus Seoul,12,0.373
+C1 SW-slow,Baengnyeong minus Seoul,24,0.393
+C1 SW-slow,China mean minus Seoul,6,0.36
+C1 SW-slow,China mean minus Seoul,12,0.496
+C1 SW-slow,China mean minus Seoul,24,0.568
+C1 SW-slow,China mean change last 12 h,6,0.098
+C1 SW-slow,China mean change last 12 h,12,0.184
+C1 SW-slow,China mean change last 12 h,24,0.203
+C1 SW-slow,KR Chungcheong minus Seoul,6,0.334
+C1 SW-slow,KR Chungcheong minus Seoul,12,0.394
+C1 SW-slow,KR Chungcheong minus Seoul,24,0.318
+C2 E-mid,Baengnyeong minus Seoul,6,0.334
+C2 E-mid,Baengnyeong minus Seoul,12,0.407
+C2 E-mid,Baengnyeong minus Seoul,24,0.385
+C2 E-mid,China mean minus Seoul,6,0.363
+C2 E-mid,China mean minus Seoul,12,0.522
+C2 E-mid,China mean minus Seoul,24,0.542
+C2 E-mid,China mean change last 12 h,6,-0.027
+C2 E-mid,China mean change last 12 h,12,0.22
+C2 E-mid,China mean change last 12 h,24,0.14
+C2 E-mid,KR Chungcheong minus Seoul,6,0.401
+C2 E-mid,KR Chungcheong minus Seoul,12,0.519
+C2 E-mid,KR Chungcheong minus Seoul,24,0.454
+C3 W-mid,Baengnyeong minus Seoul,6,0.368
+C3 W-mid,Baengnyeong minus Seoul,12,0.411
+C3 W-mid,Baengnyeong minus Seoul,24,0.37
+C3 W-mid,China mean minus Seoul,6,0.323
+C3 W-mid,China mean minus Seoul,12,0.47
+C3 W-mid,China mean minus Seoul,24,0.551
+C3 W-mid,China mean change last 12 h,6,0.141
+C3 W-mid,China mean change last 12 h,12,0.192
+C3 W-mid,China mean change last 12 h,24,0.275
+C3 W-mid,KR Chungcheong minus Seoul,6,0.246
+C3 W-mid,KR Chungcheong minus Seoul,12,0.292
+C3 W-mid,KR Chungcheong minus Seoul,24,0.232
+C4 SW-mid,Baengnyeong minus Seoul,6,0.424
+C4 SW-mid,Baengnyeong minus Seoul,12,0.356
+C4 SW-mid,Baengnyeong minus Seoul,24,0.291
+C4 SW-mid,China mean minus Seoul,6,0.399
+C4 SW-mid,China mean minus Seoul,12,0.524
+C4 SW-mid,China mean minus Seoul,24,0.537
+C4 SW-mid,China mean change last 12 h,6,0.038
+C4 SW-mid,China mean change last 12 h,12,0.147
+C4 SW-mid,China mean change last 12 h,24,0.125
+C4 SW-mid,KR Chungcheong minus Seoul,6,0.407
+C4 SW-mid,KR Chungcheong minus Seoul,12,0.423
+C4 SW-mid,KR Chungcheong minus Seoul,24,0.239
+C5 NW-fast,Baengnyeong minus Seoul,6,0.265
+C5 NW-fast,Baengnyeong minus Seoul,12,0.271
+C5 NW-fast,Baengnyeong minus Seoul,24,0.297
+C5 NW-fast,China mean minus Seoul,6,0.419
+C5 NW-fast,China mean minus Seoul,12,0.515
+C5 NW-fast,China mean minus Seoul,24,0.504
+C5 NW-fast,China mean change last 12 h,6,0.085
+C5 NW-fast,China mean change last 12 h,12,0.168
+C5 NW-fast,China mean change last 12 h,24,0.13
+C5 NW-fast,KR Chungcheong minus Seoul,6,0.346
+C5 NW-fast,KR Chungcheong minus Seoul,12,0.374
+C5 NW-fast,KR Chungcheong minus Seoul,24,0.299
+C6 NW-fast,Baengnyeong minus Seoul,6,0.46
+C6 NW-fast,Baengnyeong minus Seoul,12,0.449
+C6 NW-fast,Baengnyeong minus Seoul,24,0.333
+C6 NW-fast,China mean minus Seoul,6,0.517
+C6 NW-fast,China mean minus Seoul,12,0.629
+C6 NW-fast,China mean minus Seoul,24,0.64
+C6 NW-fast,China mean change last 12 h,6,0.17
+C6 NW-fast,China mean change last 12 h,12,0.236
+C6 NW-fast,China mean change last 12 h,24,0.282
+C6 NW-fast,KR Chungcheong minus Seoul,6,0.34
+C6 NW-fast,KR Chungcheong minus Seoul,12,0.373
+C6 NW-fast,KR Chungcheong minus Seoul,24,0.322

@@ -1,0 +1,19 @@
+﻿region,route_sensitivity,highest_regime,lowest_regime
+KR_CAPITAL,0.817,C3 W-mid,C2 E-mid
+KR_GANGWON,0.814,C3 W-mid,C2 E-mid
+KR_CHUNGCHEONG,0.722,C3 W-mid,C2 E-mid
+KR_HONAM,0.573,C3 W-mid,C2 E-mid
+KR_DAEGYEONG,0.709,C3 W-mid,C2 E-mid
+KR_DONGNAM,0.652,C3 W-mid,C2 E-mid
+KR_JEJU,0.536,C3 W-mid,C2 E-mid
+CN_BTH,0.51,C3 W-mid,C6 NW-fast
+CN_SHANDONG,0.629,C3 W-mid,C5 NW-fast
+CN_LIAONING,0.419,C3 W-mid,C6 NW-fast
+CN_JILIN,0.443,C3 W-mid,C4 SW-mid
+CN_HEILONGJIANG,0.501,C3 W-mid,C4 SW-mid
+CN_INNER_MONGOLIA,0.338,C3 W-mid,C6 NW-fast
+CN_EAST,0.597,C3 W-mid,C2 E-mid
+JP,0.412,C4 SW-mid,C2 E-mid
+JP_WEST25,0.388,C4 SW-mid,C2 E-mid
+JP_EAST,0.591,C4 SW-mid,C5 NW-fast
+MN,1.204,C6 NW-fast,C4 SW-mid
